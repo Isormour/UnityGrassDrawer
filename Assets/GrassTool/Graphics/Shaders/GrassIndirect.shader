@@ -9,18 +9,18 @@ Shader "Custom/GrassIndirect"
         _YCorrection("Y position correction",Float) = 0.0
         _AlphaRemap("Alpha Remap",Vector) = (0,1,0,1)
     }
-     SubShader
+    SubShader
     {
-        Tags { "RenderType"="Transparent" "Queue"="AlphaTest"}
+        Tags { "RenderType"="Transparent" "Queue"="AlphaTest" }
 
         // Main Pass
         Pass
         {
             ZWrite On
-            ZTest Less
-            Blend SrcAlpha OneMinusSrcAlpha 
-            AlphaToMask On
-
+            ZTest LEqual
+            Blend SrcAlpha OneMinusSrcAlpha
+            AlphaToMask On 
+            
             CGPROGRAM
 
             #pragma vertex vert
@@ -74,33 +74,38 @@ Shader "Custom/GrassIndirect"
 
                 v2f o;
 
-                //get position
+                // Pobranie pozycji �wiata
                 float3 localPos = v.vertex.xyz;
                 float4 worldPos = mul(_ParamsBuffer[ID].tranformMatrix, float4(0, 0, 0, 1));
-                float3 pos = worldPos.xyz+float3(0,_YCorrection,0);
-                //wind
+                float3 pos = worldPos.xyz + float3(0, _YCorrection, 0);
+                
+                // Symulacja wiatru
                 float windTime = _Time.y * _WindFrequency;
                 float windOffset = sin(pos.x + windTime) * _WindStrength * localPos.y;
-                localPos.x += windOffset*v.uv.y;
-
-                //billbord
-                float3 camForward = normalize(_WorldSpaceCameraPos - mul(_ParamsBuffer[ID].tranformMatrix, float4(0, 0, 0, 1)).xyz);
-                camForward = -camForward;
+                localPos.x += windOffset * v.uv.y;
+                
+                // Billboardowanie tylko w osi Y
+                float3 camPos = _WorldSpaceCameraPos;
+                camPos.y = worldPos.y; // Utrzymuje poziom trawy
+                float3 camForward = normalize(worldPos.xyz - camPos);
                 float3 camRight = normalize(cross(float3(0, 1, 0), camForward));
-                float3 camUp = normalize(cross(camForward, camRight));
+                float3 camUp = float3(0, 1, 0); // Sta�e ustawienie osi Y
                 float3 billboardPos = pos + (camRight * localPos.x) + (camUp * localPos.y);
-                float4 wpos = float4(billboardPos,1);
-
+                
+                // Zapobieganie niestabilnemu sortowaniu
+                float depthOffset = (v.uv.y * 0.005) - (windOffset * 0.001);
+                float4 wpos = float4(billboardPos + float3(0, 0, depthOffset), 1);
+                
                 float4 vpos = mul(UNITY_MATRIX_V, wpos);
                 float4 cpos = mul(UNITY_MATRIX_P, vpos);
-
-                // assign values
+                
+                // Przypisanie warto�ci
                 o.vertex = cpos;
                 o.uv = v.uv;
                 o.lightning = _ParamsBuffer[ID].light;
                 o.worldPos = worldPos.xyz;
                 o.groundColor = _ParamsBuffer[ID].textureColor;
-
+                
                 return o;
             }
 
@@ -109,14 +114,14 @@ Shader "Custom/GrassIndirect"
                 float2 uvFix = i.uv * _MainTex_ST.xy + _MainTex_ST.zw;
                 fixed4 textureColor = tex2D(_MainTex, i.uv);
                 fixed4 col = float4(1,1,1,textureColor.a);
-
-                col.rgb = lerp(i.groundColor.rgb,_ColorTop.rgb,i.uv.y*i.uv.y*i.uv.y);
+                
+                col.rgb = lerp(i.groundColor.rgb, _ColorTop.rgb, i.uv.y * i.uv.y * i.uv.y);
                 col.rgb *= textureColor;
                 col.rgb *= i.lightning;
-
-                col.a = Unity_Remap(i.uv.y*col.a,_AlphaRemap.xy,_AlphaRemap.zw).x;
-                col.a = clamp(col.a,0,1);
-   
+                
+                col.a = Unity_Remap(i.uv.y * col.a, _AlphaRemap.xy, _AlphaRemap.zw).x;
+                col.a = clamp(col.a, 0, 1);
+                
                 return col;
             }
             ENDCG
