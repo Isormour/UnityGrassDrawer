@@ -1,16 +1,16 @@
-# 📌 Nazwa Projektu
+# 📌 Grass Indirect Renderer Tool
 
 ![Main Banner](GrassRenderer.gif)
 
-Krótki opis projektu – jego cel i główne funkcje.
+Tool for unity that allows to paint grass on multiple objects and uses indirect rendering.
 
 ## 📸 Demo
 
-![Demo](https://example.com/demo.gif)
+![Main Banner](GrassRendererDraw.gif)
 
-## 🚀 Funkcje
+## 🚀 Functions
 
-✅ Funkcja 1  
-✅ Funkcja 2  
-✅ Funkcja 3  
-
+✅ Allows you to easly paint grass.
+✅ Lets you create custom grass material.
+✅ Creates object with data for specific gameObject on Scene.
+✅ Culls grasses that are out of viewport
