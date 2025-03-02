@@ -86,7 +86,7 @@ Material:
     - _UVSec: 0
     - _WindFrequency: 1
     - _WindStrength: 0.5
-    - _YCorrection: 0.3
+    - _YCorrection: 0.4
     - _ZWrite: 0
     m_Colors:
     - _AlphaRemap: {r: 0, g: 0.12, b: 0, a: 1.73}
