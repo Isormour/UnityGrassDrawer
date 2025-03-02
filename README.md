@@ -14,3 +14,7 @@ Tool for unity that allows to paint grass on multiple objects and uses indirect 
 - ✅ Lets you create custom grass material.
 - ✅ Creates object with data for specific gameObject on Scene.
 - ✅ Culls grasses that are out of viewport
+
+TODO:
+Find solution to better manage large amount(milions) of grass instances. 
+Right now they are renderered fast,but modification(adding/removing) on one huge array is bad approach.
