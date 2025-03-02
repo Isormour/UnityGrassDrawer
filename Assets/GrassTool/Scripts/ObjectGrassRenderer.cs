@@ -12,6 +12,7 @@ public class ObjectGrassRenderer
     [SerializeField] Material drawMat;
     [SerializeField] Mesh drawMesh;
     BasicInstancedParams[] instanceParams;
+    RenderParams renderParams;
     public ObjectGrassRenderer(GrassObjectData data, Material drawMat, Mesh drawMesh)
     {
         this.data = data;
@@ -22,7 +23,10 @@ public class ObjectGrassRenderer
         this.commandData = new GraphicsBuffer.IndirectDrawIndexedArgs[1];
         instanceParams = new BasicInstancedParams[instances];
         if (instances > 0)
+        {
             paramsBuffer = new ComputeBuffer(instances, GetStructSize(typeof(BasicInstancedParams)));
+            InitializeRender();
+        }
     }
     int GetStructSize(Type paramType)
     {
@@ -52,14 +56,20 @@ public class ObjectGrassRenderer
 #else
         Material.Destroy(drawMat);
 #endif
+
     }
 
     public void Draw()
     {
-        RenderParams rp = new RenderParams(drawMat);
+        Graphics.RenderMeshIndirect(renderParams, drawMesh, commandBuf, 1);
+    }
 
-        rp.worldBounds = data.ObjectBounds;
-        rp.matProps = new MaterialPropertyBlock();
+    private void InitializeRender()
+    {
+        renderParams = new RenderParams(drawMat);
+
+        renderParams.worldBounds = data.ObjectBounds;
+        renderParams.matProps = new MaterialPropertyBlock();
 
         for (int i = 0; i < instances; i++)
         {
@@ -70,12 +80,11 @@ public class ObjectGrassRenderer
         }
         paramsBuffer.SetData(instanceParams);
 
-        rp.matProps.SetBuffer("_ParamsBuffer", paramsBuffer);
+        renderParams.matProps.SetBuffer("_ParamsBuffer", paramsBuffer);
 
         commandData[0].indexCountPerInstance = drawMesh.GetIndexCount(0);
         commandData[0].instanceCount = (uint)instances;
 
         commandBuf.SetData(commandData);
-        Graphics.RenderMeshIndirect(rp, drawMesh, commandBuf, 1);
     }
 }
