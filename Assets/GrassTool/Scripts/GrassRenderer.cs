@@ -65,5 +65,6 @@ public class GrassRenderer : MonoBehaviour
                 rend.Deinitialize();
             }
         }
+        renderers = null;
     }
 }
