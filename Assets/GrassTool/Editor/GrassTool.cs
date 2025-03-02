@@ -16,6 +16,8 @@ public class GrassTool
     public delegate void OnPointsChanged();
     OnPointsChanged onPointsChanged;
     int lightmapIndex = -1;
+    float brushScale = 1;
+
     public GrassTool(GameObject selectedObj, Material brushMat, Mesh brushMesh, OnPointsChanged onPointsChanged)
     {
         this.selectedObj = selectedObj;
@@ -129,17 +131,32 @@ public class GrassTool
             DrawPaintMarker(hit);
         }
 
-        if (Event.current.button == 0 && Event.current.type == EventType.MouseDown)
+        // input
+        Event e = Event.current;
+        bool isScrollWithShift = e.type == EventType.ScrollWheel && e.shift;
+        if (isScrollWithShift)
+        {
+            brushScale += e.delta.x;
+            brushScale = Mathf.Clamp(brushScale, 0.5f, 100);
+        }
+
+        bool isLeftClicked = e.button == 0 && e.type == EventType.MouseDown;
+        bool isLeftHoldWithShift = e.button == 0 && e.type == EventType.MouseDrag && e.shift;
+        if (isLeftClicked || isLeftHoldWithShift)
         {
             AddGrassPoints(hit);
         }
-        if (Event.current.button == 1 && Event.current.type == EventType.MouseDown)
+        bool isRightclicked = e.button == 1 && e.type == EventType.MouseDown;
+        bool isRightHoldWithShift = e.button == 1 && e.type == EventType.MouseDrag && e.shift;
+        if (isRightclicked || isRightHoldWithShift)
         {
             RemoveGrassPoints(hit);
         }
     }
     private void DrawCurrentPositions()
     {
+        if (currentObjectData.GrassBlades.Length > 15000) return;
+
         foreach (var grassBlade in currentObjectData.GrassBlades)
         {
             Debug.DrawRay(grassBlade.Position, Vector3.up * 0.2f, Color.green);
@@ -155,7 +172,7 @@ public class GrassTool
             List<GrassObjectData.GrassBladeData> tempGrassBlades = currentObjectData.GrassBlades.ToList();
             for (int i = 0; i < tempGrassBlades.Count; i++)
             {
-                if (Vector3.Distance(tempGrassBlades[i].Position, hit.point) < 1)
+                if (Vector3.Distance(tempGrassBlades[i].Position, hit.point) < 1 * brushScale)
                 {
                     tempGrassBlades.RemoveAt(i);
                     i--;
@@ -172,7 +189,7 @@ public class GrassTool
         currentEvent.Use();
         if (hit.collider)
         {
-            List<GrassObjectData.GrassBladeData> toAdd = FindPointsOnObject(selectedObj, 1, 10, hit.point);
+            List<GrassObjectData.GrassBladeData> toAdd = FindPointsOnObject(selectedObj, 10 * brushScale, hit.point);
             List<GrassObjectData.GrassBladeData> tempGrassBlades = currentObjectData.GrassBlades.ToList();
 
             for (int i = 0; i < toAdd.Count; i++)
@@ -196,17 +213,17 @@ public class GrassTool
         Color tempColor = Color.green;
         tempColor.a = 0.5f;
         Handles.color = tempColor;
-        Matrix4x4 matrix = Matrix4x4.TRS(hit.point, Quaternion.identity, new Vector3(1, 1, 1));
+        Matrix4x4 matrix = Matrix4x4.TRS(hit.point, Quaternion.identity, new Vector3(1, 1, 1) * brushScale);
 
         SceneView.RepaintAll();
         Renderer renderer = hit.collider.GetComponent<Renderer>();
         int lightmapIndex = renderer.lightmapIndex;
         Color lightmapColor = Color.white;
-        lightmapColor.a = 0.3f;
         if (lightmapIndex != -1)
         {
             lightmapColor = SampleLightmap(hit);
         }
+        lightmapColor.a = 0.3f;
         brushMat.SetColor("_Color", lightmapColor);
         brushMat.SetPass(0);
         Graphics.DrawMeshNow(brushMesh, matrix, 0);
@@ -214,13 +231,13 @@ public class GrassTool
         SceneView.RepaintAll();
         Handles.color = originalColor;
     }
-    private List<GrassObjectData.GrassBladeData> FindPointsOnObject(GameObject obj, float radious, float density, Vector3 Position)
+    private List<GrassObjectData.GrassBladeData> FindPointsOnObject(GameObject obj, float density, Vector3 Position)
     {
         List<GrassObjectData.GrassBladeData> points = new List<GrassObjectData.GrassBladeData>();
-        int amount = (int)(density / radious);
+        int amount = (int)(density);
         for (int i = 0; i < amount; i++)
         {
-            float randomRadious = Random.Range(0, radious);
+            float randomRadious = Random.Range(0.0f, 1.0f) * brushScale;
             float randomAngle = Random.Range(0, 360);
             Vector3 randomPoint = GetPointOnCircle(Position, randomRadious, randomAngle);
             randomPoint += new Vector3(0, 3, 0);
@@ -287,7 +304,7 @@ public class GrassTool
         int x = Mathf.FloorToInt(uv.x * currentTexture.width);
         int y = Mathf.FloorToInt(uv.y * currentTexture.height);
         Color color = currentTexture.GetPixel(x, y);
-
+        color = color.linear;
 
         return color;
 

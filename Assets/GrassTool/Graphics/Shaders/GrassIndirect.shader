@@ -32,7 +32,7 @@ Shader "Custom/GrassIndirect"
 
             struct shaderParams
             {
-                float4x4 tranformMatrix;
+                float3 position;
                 float light;
                 float4 textureColor;
             };
@@ -76,7 +76,7 @@ Shader "Custom/GrassIndirect"
 
                 // Pobranie pozycji �wiata
                 float3 localPos = v.vertex.xyz;
-                float4 worldPos = mul(_ParamsBuffer[ID].tranformMatrix, float4(0, 0, 0, 1));
+                float3 worldPos = _ParamsBuffer[ID].position;
                 float3 pos = worldPos.xyz + float3(0, _YCorrection, 0);
                 
                 // Symulacja wiatru

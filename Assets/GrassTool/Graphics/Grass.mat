@@ -85,7 +85,7 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _WindFrequency: 2
-    - _WindStrength: 0.5
+    - _WindStrength: 0.25
     - _YCorrection: 0.3
     - _ZWrite: 0
     m_Colors:
@@ -93,7 +93,7 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorBottom: {r: 0, g: 0, b: 0, a: 1}
     - _ColorRemap: {r: 0, g: 1, b: 0, a: 1}
-    - _ColorTop: {r: 0.7326556, g: 1, b: 0.41037738, a: 1}
+    - _ColorTop: {r: 0.008658171, g: 1, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _LightmapScaleOffset: {r: 0.02, g: 0.02, b: -0.145, a: -0.145}
   m_BuildTextureStacks: []

@@ -30,7 +30,7 @@ public class ObjectGrassRenderer
     }
     public struct BasicInstancedParams
     {
-        public Matrix4x4 transformMatrix;
+        public Vector3 position;
         public float light;
         public Color textureColor;
     }
@@ -64,11 +64,9 @@ public class ObjectGrassRenderer
         for (int i = 0; i < instances; i++)
         {
             instanceParams[i] = new BasicInstancedParams();
-
-            Quaternion rotation = Quaternion.identity;
-            instanceParams[i].transformMatrix = Matrix4x4.TRS(data.GrassBlades[i].Position, rotation, new Vector3(1, 1, 1));
+            instanceParams[i].position = data.GrassBlades[i].Position;
             instanceParams[i].light = data.GrassBlades[i].Light;
-            instanceParams[i].textureColor = data.GrassBlades[i].GroundColor.linear;
+            instanceParams[i].textureColor = data.GrassBlades[i].GroundColor;
         }
         paramsBuffer.SetData(instanceParams);
 

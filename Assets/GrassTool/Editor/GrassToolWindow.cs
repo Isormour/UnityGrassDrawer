@@ -189,6 +189,7 @@ public class GrassToolWindow : EditorWindow
     }
     void StartDraw()
     {
+        if (startPaint) return;
         startPaint = true;
         SceneVisibilityManager.instance.DisableAllPicking();
         tempHotControl = GUIUtility.hotControl;
@@ -201,6 +202,7 @@ public class GrassToolWindow : EditorWindow
     }
     void EndDraw()
     {
+        if (!startPaint) return;
         startPaint = false;
         SceneVisibilityManager.instance.EnableAllPicking();
         SceneView.duringSceneGui -= tool.OnSceneGUI;
