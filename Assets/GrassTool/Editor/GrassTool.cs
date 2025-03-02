@@ -9,6 +9,8 @@ public class GrassTool
 {
     GameObject selectedObj;
     public GrassObjectData currentObjectData { private set; get; }
+    public int Density;
+
     Material brushMat;
     Mesh brushMesh;
     Texture2D currentTexture;
@@ -17,13 +19,14 @@ public class GrassTool
     OnPointsChanged onPointsChanged;
     int lightmapIndex = -1;
     float brushScale = 1;
-
+    public bool DrawGizmos = true;
     public GrassTool(GameObject selectedObj, Material brushMat, Mesh brushMesh, OnPointsChanged onPointsChanged)
     {
         this.selectedObj = selectedObj;
         this.brushMat = brushMat;
         this.brushMesh = brushMesh;
         this.onPointsChanged = onPointsChanged;
+        this.Density = 1;
         LoadData();
         if (selectedObj != null)
         {
@@ -155,7 +158,7 @@ public class GrassTool
     }
     private void DrawCurrentPositions()
     {
-        if (currentObjectData.GrassBlades.Length > 15000) return;
+        if (currentObjectData.GrassBlades.Length > 15000 || !DrawGizmos) return;
 
         foreach (var grassBlade in currentObjectData.GrassBlades)
         {
@@ -189,7 +192,7 @@ public class GrassTool
         currentEvent.Use();
         if (hit.collider)
         {
-            List<GrassObjectData.GrassBladeData> toAdd = FindPointsOnObject(selectedObj, 10 * brushScale, hit.point);
+            List<GrassObjectData.GrassBladeData> toAdd = FindPointsOnObject(selectedObj, 10 * Density * brushScale, hit.point);
             List<GrassObjectData.GrassBladeData> tempGrassBlades = currentObjectData.GrassBlades.ToList();
 
             for (int i = 0; i < toAdd.Count; i++)
@@ -238,7 +241,7 @@ public class GrassTool
         for (int i = 0; i < amount; i++)
         {
             float randomRadious = Random.Range(0.0f, 1.0f) * brushScale;
-            float randomAngle = Random.Range(0, 360);
+            float randomAngle = Random.Range(0.0f, 360.0f);
             Vector3 randomPoint = GetPointOnCircle(Position, randomRadious, randomAngle);
             randomPoint += new Vector3(0, 3, 0);
             RaycastHit hitInfo;
@@ -254,7 +257,10 @@ public class GrassTool
                     points.Add(data);
                 }
             }
-            Debug.DrawRay(randomPoint, -Vector3.up * 3, Color.cyan, 0.1f);
+            if (DrawGizmos)
+            {
+                Debug.DrawRay(randomPoint, -Vector3.up * 3, Color.cyan, 0.1f);
+            }
         }
         return points;
     }

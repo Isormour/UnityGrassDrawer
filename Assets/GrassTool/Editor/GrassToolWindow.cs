@@ -138,8 +138,12 @@ public class GrassToolWindow : EditorWindow
     {
         selectedObj = EditorGUILayout.ObjectField(selectedObj, typeof(GameObject), true) as GameObject;
         if (GetDrawProblems()) return;
+
         DrawData();
         DrawControls();
+
+        tool.DrawGizmos = EditorGUILayout.Toggle("Draw Gizmo ", tool.DrawGizmos);
+        tool.Density = EditorGUILayout.IntField("Density ", tool.Density);
     }
 
     private static bool GetDrawProblems()
