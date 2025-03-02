@@ -139,9 +139,25 @@ public class GrassToolWindow : EditorWindow
         selectedObj = EditorGUILayout.ObjectField(selectedObj, typeof(GameObject), true) as GameObject;
         if (GetDrawProblems()) return;
 
-        DrawData();
-        DrawControls();
 
+        DrawControls();
+        DrawData();
+        DrawSettings();
+        EditorGUILayout.LabelField("");
+        EditorGUILayout.LabelField("Controls:");
+        DrawLegend();
+    }
+
+    private static void DrawLegend()
+    {
+        EditorGUILayout.LabelField("LMB add grass");
+        EditorGUILayout.LabelField("RMB remove grass");
+        EditorGUILayout.LabelField("Hold shift to continuous paint");
+        EditorGUILayout.LabelField("Hold shift + scroll to change brush size");
+    }
+
+    private void DrawSettings()
+    {
         tool.DrawGizmos = EditorGUILayout.Toggle("Draw Gizmo ", tool.DrawGizmos);
         tool.Density = EditorGUILayout.IntField("Density ", tool.Density);
     }
@@ -153,19 +169,11 @@ public class GrassToolWindow : EditorWindow
             EditorGUILayout.LabelField("Select object to draw on and provide lightning settings");
             return true;
         }
-        if (!lightmap)
-        {
-            EditorGUILayout.LabelField("provide lightmap if needed");
-        }
         MeshRenderer Rend = selectedObj.GetComponent<MeshRenderer>();
         if (!Rend)
         {
             EditorGUILayout.LabelField("Select object with mesh renderer");
             return true;
-        }
-        if (lightmap != null && !lightmap.isReadable)
-        {
-            EditorGUILayout.LabelField("Ensure lightmaptexture is READABLE");
         }
         return false;
     }
