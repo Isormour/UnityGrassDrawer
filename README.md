@@ -8,6 +8,9 @@ Tool for unity that allows to paint grass on multiple objects and uses indirect 
 
 ![Main Banner](GrassRendererDraw.gif)
 
+- :bug: Known Issues
+- Scene that you want to have grass on, needs to be saved and seleced as main.
+- otherwise program cant find proper path.
 ## 🚀 Functions
 
 - ✅ Allows you to easly paint grass.
