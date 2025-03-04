@@ -1269,6 +1269,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: be4530672081ded4b823246cdec89000, type: 2}
   - {fileID: 11400000, guid: 5e02255ce2d4da64fbc899b55a791d9e, type: 2}
   - {fileID: 11400000, guid: 23d017849b0042040bea65918e0d468e, type: 2}
+  - {fileID: 11400000, guid: 36c42e012b5bf924980ca1cc11d2b4a2, type: 2}
+  - {fileID: 11400000, guid: dc8c10ef969840643aa5a4232f40a107, type: 2}
+  - {fileID: 11400000, guid: 0a616dc6c806ef44da074ca000bf7a90, type: 2}
+  - {fileID: 11400000, guid: 079f7867acfe64c44a1300442147c23d, type: 2}
+  - {fileID: 11400000, guid: 1c363d84d923bf54f891e891a3387392, type: 2}
+  - {fileID: 11400000, guid: cc796ad1b1ffa3b438d100f89936d2aa, type: 2}
+  - {fileID: 11400000, guid: f3c7f3351e255af44a9970b14f15a6d4, type: 2}
+  - {fileID: 11400000, guid: d20956a56952b1c42b21fc70a024f0ff, type: 2}
+  - {fileID: 11400000, guid: d8a98204ce531634faf829a8ede831ca, type: 2}
   grassMat: {fileID: 2100000, guid: f2f3bb346e7cef64e94495e746097455, type: 2}
   grassMesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1274026989
@@ -1780,7 +1789,6 @@ GameObject:
   - component: {fileID: 1960224216}
   - component: {fileID: 1960224218}
   - component: {fileID: 1960224217}
-  - component: {fileID: 1960224219}
   m_Layer: 0
   m_Name: StoneLow (4)
   m_TagString: Untagged
@@ -1852,28 +1860,6 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960224215}
-  m_Mesh: {fileID: -9118635377772757425, guid: 0179947ae81101e4dba55610d9395198, type: 3}
---- !u!64 &1960224219
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1960224215}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
   m_Mesh: {fileID: -9118635377772757425, guid: 0179947ae81101e4dba55610d9395198, type: 3}
 --- !u!1 &2015207852
 GameObject:
