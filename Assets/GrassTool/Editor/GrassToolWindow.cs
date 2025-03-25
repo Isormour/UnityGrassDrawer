@@ -1,4 +1,3 @@
-using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
@@ -13,10 +12,6 @@ public class GrassToolWindow : EditorWindow
     static Mesh brushMesh;
     static Material brushMat;
     static GameObject selectedObj;
-    static Texture2D lightmap;
-
-    bool defaultColorSet = false;
-    Color defaultUIColor;
 
     GrassTool tool;
     [MenuItem("Tools/GrassDrawer")]
@@ -29,14 +24,13 @@ public class GrassToolWindow : EditorWindow
     void InitWindow()
     {
         selectedObj = null;
-        Selection.selectionChanged += OnSelectionChanged;
+        // Selection.selectionChanged += OnSelectionChanged;
 
         LoadToolAssets();
         if (!brushMat || !brushMesh)
             return;
 
-        tool = new GrassTool(selectedObj, brushMat, brushMesh, OnGrassPointsChanged);
-        OnSelectionChanged();
+        tool = new GrassTool(brushMat, brushMesh, OnGrassPointsChanged);
     }
 
     private static void LoadToolAssets()
@@ -49,7 +43,6 @@ public class GrassToolWindow : EditorWindow
 
     private void OnDisable()
     {
-        Selection.selectionChanged -= OnSelectionChanged;
         SceneView.duringSceneGui -= tool.OnSceneGUI;
         if (startPaint)
         {
@@ -57,20 +50,6 @@ public class GrassToolWindow : EditorWindow
         }
     }
 
-
-    void OnSelectionChanged()
-    {
-        if (selectedObj != Selection.activeGameObject && startPaint)
-        {
-            EndDraw();
-        }
-        selectedObj = Selection.activeGameObject;
-        if (selectedObj != null && selectedObj.GetComponent<Renderer>())
-            tool.ChangeSelectedObj(selectedObj);
-        else if (selectedObj == null && startPaint)
-            EndDraw();
-        this.Repaint();
-    }
     private void OnGUI()
     {
         if (startPaint)
@@ -83,8 +62,6 @@ public class GrassToolWindow : EditorWindow
     }
     void DrawUI()
     {
-
-
         if (!brushMesh || !brushMat || !GrassRendererExsist())
         {
             DrawInitPanel();
@@ -125,7 +102,7 @@ public class GrassToolWindow : EditorWindow
             EditorGUILayout.LabelField("No grass renderer on scene", redLabelStyle);
         }
         if (brushMat != null && brushMesh != null)
-            this.tool = new GrassTool(selectedObj, brushMat, brushMesh, OnGrassPointsChanged);
+            this.tool = new GrassTool(brushMat, brushMesh, OnGrassPointsChanged);
 
 
     }
@@ -136,10 +113,6 @@ public class GrassToolWindow : EditorWindow
     }
     private void DrawPaintPanel()
     {
-        selectedObj = EditorGUILayout.ObjectField(selectedObj, typeof(GameObject), true) as GameObject;
-        if (GetDrawProblems()) return;
-
-
         DrawControls();
         DrawData();
         DrawSettings();
@@ -162,39 +135,28 @@ public class GrassToolWindow : EditorWindow
         tool.Density = EditorGUILayout.IntField("Density ", tool.Density);
     }
 
-    private static bool GetDrawProblems()
-    {
-        if (selectedObj == null)
-        {
-            EditorGUILayout.LabelField("Select object to draw on and provide lightning settings");
-            return true;
-        }
-        MeshRenderer Rend = selectedObj.GetComponent<MeshRenderer>();
-        if (!Rend)
-        {
-            EditorGUILayout.LabelField("Select object with mesh renderer");
-            return true;
-        }
-        return false;
-    }
-
     private void DrawData()
     {
         EditorGUILayout.LabelField("");
-        EditorGUILayout.LabelField("Name = " + selectedObj.name);
-        EditorGUILayout.LabelField("Grass Points = " + tool.currentObjectData.GrassBlades.Count());
-        EditorGUILayout.LabelField("Object Position = " + tool.currentObjectData.ObjectBounds.center);
-        EditorGUILayout.LabelField("ID = " + selectedObj.GetInstanceID());
+        //TO REWORK
+
+        if (startPaint)
+        {
+            EditorGUILayout.LabelField("Objects in viewport count = " + tool.viewportCollider.objectsInView.Count);
+            //        EditorGUILayout.LabelField("Grass Points = " + tool.currentObjectData.GrassBlades.Count());
+            //        EditorGUILayout.LabelField("Object Position = " + tool.currentObjectData.ObjectBounds.center);
+            //        EditorGUILayout.LabelField("ID = " + selectedObj.GetInstanceID());
+        }
         EditorGUILayout.LabelField("");
     }
 
     void DrawControls()
     {
-        if (GUILayout.Button("Start Paint"))
+        if (!startPaint && GUILayout.Button("Start Paint"))
         {
             StartDraw();
         }
-        if (GUILayout.Button("End Paint"))
+        if (startPaint && GUILayout.Button("End Paint"))
         {
             EndDraw();
         }
@@ -203,18 +165,25 @@ public class GrassToolWindow : EditorWindow
     {
         if (startPaint) return;
         startPaint = true;
+        SceneView.duringSceneGui += RepaintWindow;
         SceneVisibilityManager.instance.DisableAllPicking();
         tempHotControl = GUIUtility.hotControl;
         GUIUtility.hotControl = 0;
 
-        MeshCollider meshColl = selectedObj.AddComponent<MeshCollider>();
-        meshColl.sharedMesh = selectedObj.GetComponent<MeshFilter>().sharedMesh;
+        tool.StartDraw();
         SceneView.duringSceneGui += tool.OnSceneGUI;
         Tools.hidden = true;
     }
+
+    private void RepaintWindow(SceneView view)
+    {
+        Repaint();
+    }
+
     void EndDraw()
     {
         if (!startPaint) return;
+        SceneView.duringSceneGui -= RepaintWindow;
         startPaint = false;
         SceneVisibilityManager.instance.EnableAllPicking();
         SceneView.duringSceneGui -= tool.OnSceneGUI;

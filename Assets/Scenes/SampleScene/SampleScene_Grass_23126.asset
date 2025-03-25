@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85c6364eb75fedf4fb36a18d59f52fb0, type: 3}
+  m_Name: SampleScene_Grass_23126
+  m_EditorClassIdentifier: 
+  GrassBlades:
+  - Position: {x: -12.592652, y: 4.2784667, z: 0.0711458}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -12.346523, y: 2.607727, z: -0.57734275}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -12.266, y: 2.4289145, z: -0.050631136}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -11.928048, y: 2.2467067, z: -0.53445673}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -12.238055, y: 2.3027437, z: -0.6743603}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -13.228115, y: 6.1562943, z: 0.28531197}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -12.8391285, y: 5.5293946, z: 0.5632689}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -12.446463, y: 2.99254, z: -0.90282154}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -11.820744, y: 1.359155, z: -0.040894866}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -13.264097, y: 6.01801, z: -0.5082195}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -12.990667, y: 5.7354093, z: -0.176285}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -13.57045, y: 6.3504014, z: -0.47221825}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -13.622187, y: 6.5115037, z: 0.079000264}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -12.882452, y: 5.2867613, z: -0.5214255}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -13.676283, y: 6.528004, z: -0.09634945}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -13.3967705, y: 6.0779305, z: -0.9247143}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -12.267691, y: 2.4009273, z: -0.7551999}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -13.853091, y: 6.6854286, z: -0.0681884}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -13.023959, y: 5.708218, z: -0.48105308}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -13.076656, y: 5.728104, z: -0.69374204}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -12.520275, y: 3.3213425, z: -1.0592479}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -13.419901, y: 6.107632, z: -0.9136765}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -13.259199, y: 6.0381904, z: -0.39664575}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -13.434973, y: 6.044491, z: -1.2539871}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -13.32535, y: 6.067186, z: -0.6116688}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -13.29833, y: 5.9705033, z: -0.8757355}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -13.747496, y: 6.4342065, z: -0.8417089}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -12.39015, y: 2.735937, z: -0.7943069}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -12.850684, y: 4.7649856, z: -1.4926884}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -13.881578, y: 6.610623, z: -0.5982673}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  ObjectBounds:
+    m_Center: {x: -16.351353, y: 1.6187395, z: -0.0143691655}
+    m_Extent: {x: 4.872937, y: 6.768547, z: 7.25602}

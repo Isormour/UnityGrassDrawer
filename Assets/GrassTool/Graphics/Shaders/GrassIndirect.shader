@@ -61,6 +61,7 @@ Shader "Custom/GrassIndirect"
             float _WindFrequency;
             float _YCorrection;
             float4 _AlphaRemap;
+            float4 _InteractPosition;
 
             float4 Unity_Remap(float4 In, float2 InMinMax, float2 OutMinMax)
             {
@@ -77,6 +78,15 @@ Shader "Custom/GrassIndirect"
                 // Pobranie pozycji �wiata
                 float3 localPos = v.vertex.xyz;
                 float3 worldPos = _ParamsBuffer[ID].position;
+
+                
+                float distanceToInteract = distance(worldPos,_InteractPosition);
+                distanceToInteract = distanceToInteract/5;
+                distanceToInteract =  distanceToInteract*distanceToInteract*distanceToInteract;
+                localPos *= clamp(distanceToInteract,0.1,1);
+
+                
+
                 float3 pos = worldPos.xyz + float3(0, _YCorrection, 0);
                 
                 // Symulacja wiatru

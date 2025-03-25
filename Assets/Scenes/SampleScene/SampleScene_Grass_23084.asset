@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85c6364eb75fedf4fb36a18d59f52fb0, type: 3}
+  m_Name: SampleScene_Grass_23084
+  m_EditorClassIdentifier: 
+  GrassBlades:
+  - Position: {x: -13.540262, y: 6.4383297, z: 0.06459883}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -13.872893, y: 6.547534, z: -0.8533814}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -13.943235, y: 6.6596, z: -0.6352618}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -14.064619, y: 6.7921734, z: -0.50853086}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -13.238621, y: 6.026683, z: -0.32963392}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -13.950692, y: 6.7293463, z: -0.3023593}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -12.743061, y: 4.9366865, z: 0.08271292}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -13.795975, y: 6.4370365, z: -1.0360906}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -13.754428, y: 6.599514, z: -0.07267591}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  - Position: {x: -13.49943, y: 6.2284856, z: -0.7263472}
+    Light: 1
+    GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  ObjectBounds:
+    m_Center: {x: -16.351353, y: 1.6187395, z: -0.0143691655}
+    m_Extent: {x: 4.872937, y: 6.768547, z: 7.25602}

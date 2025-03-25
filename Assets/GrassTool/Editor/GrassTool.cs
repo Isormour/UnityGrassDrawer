@@ -7,125 +7,66 @@ using Random = UnityEngine.Random;
 
 public class GrassTool
 {
-    GameObject selectedObj;
-    public GrassObjectData currentObjectData { private set; get; }
+    public Dictionary<GameObject, GrassObjectData> selectedObjects { private set; get; }
     public int Density;
 
     Material brushMat;
     Mesh brushMesh;
-    Texture2D currentTexture;
-    bool SetReadeableToFalse = false;
+
     public delegate void OnPointsChanged();
     OnPointsChanged onPointsChanged;
     int lightmapIndex = -1;
     float brushScale = 1;
     public bool DrawGizmos = true;
-    public GrassTool(GameObject selectedObj, Material brushMat, Mesh brushMesh, OnPointsChanged onPointsChanged)
+
+    public GrassToolViewPortCollider viewportCollider { private set; get; }
+    public GrassTool(Material brushMat, Mesh brushMesh, OnPointsChanged onPointsChanged)
     {
-        this.selectedObj = selectedObj;
         this.brushMat = brushMat;
         this.brushMesh = brushMesh;
         this.onPointsChanged = onPointsChanged;
         this.Density = 1;
-        LoadData();
-        if (selectedObj != null)
-        {
-            MeshCollider meshColl = selectedObj.AddComponent<MeshCollider>();
-            meshColl.sharedMesh = selectedObj.GetComponent<MeshFilter>().sharedMesh;
-        }
+        selectedObjects = new Dictionary<GameObject, GrassObjectData>();
     }
-    private bool GetDataObject()
+
+    private bool GetDataObject(GameObject obj)
     {
-        string filePath = GetFilePath();
-        currentObjectData = AssetDatabase.LoadAssetAtPath<GrassObjectData>(filePath);
-        return currentObjectData != null;
+        string filePath = GetFilePath(obj);
+        GrassObjectData tempData = AssetDatabase.LoadAssetAtPath<GrassObjectData>(filePath);
+        if (!selectedObjects.ContainsKey(obj))
+        {
+            AddSelectedObject(obj, tempData);
+        }
+        return tempData != null;
     }
 
-    public void ChangeSelectedObj(GameObject newObj)
+    private void AddSelectedObject(GameObject obj, GrassObjectData tempData)
     {
-        if (selectedObj != null)
-        {
-            EndDraw();
-            if (SetReadeableToFalse)
-            {
-                SetTextureReadable(currentTexture, false);
-            }
-        }
-        if (lightmapIndex > -1)
-        {
-            LightmapData lightmapData = LightmapSettings.lightmaps[lightmapIndex];
-            Texture2D lightmapTexture = lightmapData.lightmapColor;
-            if (!LightmapSettings.lightmaps[lightmapIndex].lightmapColor.isReadable)
-            {
-                SetTextureReadable(lightmapTexture, false);
-            }
-        }
-        selectedObj = newObj;
-        LoadData();
-        CheckRendererGrassObjectData();
-
-        Renderer renderer = newObj.GetComponent<Renderer>();
-        currentTexture = renderer.sharedMaterial.mainTexture as Texture2D;
-
-
-        if (!currentTexture.isReadable)
-        {
-            SetReadeableToFalse = true;
-            SetTextureReadable(currentTexture, true);
-        }
-
-        lightmapIndex = renderer.lightmapIndex;
-        if (lightmapIndex > -1)
-        {
-            LightmapData lightmapData = LightmapSettings.lightmaps[lightmapIndex];
-            Texture2D lightmapTexture = lightmapData.lightmapColor;
-            if (!LightmapSettings.lightmaps[lightmapIndex].lightmapColor.isReadable)
-            {
-                SetTextureReadable(lightmapTexture, true);
-            }
-        }
-
-
+        selectedObjects.Add(obj, tempData);
+        Texture2D texture = (Texture2D)obj.GetComponent<Renderer>().sharedMaterial.mainTexture;
+        SetTextureReadable(texture, true);
     }
 
-    private void CheckRendererGrassObjectData()
-    {
-        GrassRenderer rend = GameObject.FindObjectOfType<GrassRenderer>();
-        bool rendererContainsData = false;
-        for (int i = 0; i < rend.CurrentGrassObjects.Length; i++)
-        {
-            if (rend.CurrentGrassObjects[i] == currentObjectData)
-            {
-                rendererContainsData = true;
-                break;
-            }
-        }
-        if (!rendererContainsData)
-        {
-            rend.AddGrassObject(currentObjectData);
-        }
-    }
-
-    private void LoadData()
+    private void LoadData(GameObject selectedObj)
     {
         if (selectedObj == null) return;
-        if (GetDataObject())
+        GrassObjectData tempData = null;
+        if (GetDataObject(selectedObj))
         {
-            currentObjectData = ApplyData();
+            tempData = ApplyData(selectedObj);
         }
         else
         {
-            Renderer rend = selectedObj.GetComponent<Renderer>();
-            if (rend)
-                currentObjectData = GrassObjectData.CreateGrassObjectData(rend);
+            tempData = GrassObjectData.CreateGrassObjectData(selectedObj.GetComponent<Renderer>());
         }
+
+        if (!selectedObjects.ContainsKey(selectedObj))
+            selectedObjects.Add(selectedObj, null);
+        selectedObjects[selectedObj] = tempData;
     }
 
     public void OnSceneGUI(SceneView view)
     {
-
-        DrawCurrentPositions();
-
         Ray ray = HandleUtility.GUIPointToWorldRay(Event.current.mousePosition);
         RaycastHit hit;
 
@@ -156,23 +97,16 @@ public class GrassTool
             RemoveGrassPoints(hit);
         }
     }
-    private void DrawCurrentPositions()
-    {
-        if (currentObjectData.GrassBlades.Length > 15000 || !DrawGizmos) return;
 
-        foreach (var grassBlade in currentObjectData.GrassBlades)
-        {
-            Debug.DrawRay(grassBlade.Position, Vector3.up * 0.2f, Color.green);
-        }
-    }
     private void RemoveGrassPoints(RaycastHit hit)
     {
+        if (selectedObjects.Keys.Count < 1) return;
         Event currentEvent = Event.current;
         currentEvent.Use();
-        if (hit.collider)
+        if (hit.collider && hit.collider.GetComponent<Renderer>())
         {
-
-            List<GrassObjectData.GrassBladeData> tempGrassBlades = currentObjectData.GrassBlades.ToList();
+            GrassObjectData currentData = selectedObjects[hit.collider.gameObject];
+            List<GrassObjectData.GrassBladeData> tempGrassBlades = currentData.GrassBlades.ToList();
             for (int i = 0; i < tempGrassBlades.Count; i++)
             {
                 if (Vector3.Distance(tempGrassBlades[i].Position, hit.point) < 1 * brushScale)
@@ -181,19 +115,20 @@ public class GrassTool
                     i--;
                 }
             }
-            currentObjectData.GrassBlades = tempGrassBlades.ToArray();
+            currentData.GrassBlades = tempGrassBlades.ToArray();
+            currentData.RefreshRenderer();
+            onPointsChanged?.Invoke();
         }
-        onPointsChanged?.Invoke();
-        currentObjectData.RefreshRenderer();
     }
     private void AddGrassPoints(RaycastHit hit)
     {
         Event currentEvent = Event.current;
         currentEvent.Use();
-        if (hit.collider)
+        if (hit.collider && hit.collider.GetComponent<Renderer>())
         {
-            List<GrassObjectData.GrassBladeData> toAdd = FindPointsOnObject(selectedObj, 10 * Density * brushScale, hit.point);
-            List<GrassObjectData.GrassBladeData> tempGrassBlades = currentObjectData.GrassBlades.ToList();
+            GrassObjectData currentData = selectedObjects[hit.collider.gameObject];
+            List<GrassObjectData.GrassBladeData> toAdd = FindPointsOnObject(10 * Density * brushScale, hit.point);
+            List<GrassObjectData.GrassBladeData> tempGrassBlades = currentData.GrassBlades.ToList();
 
             for (int i = 0; i < toAdd.Count; i++)
             {
@@ -204,10 +139,10 @@ public class GrassTool
                 tempGrassBlades.Add(temp);
 
             }
-            currentObjectData.GrassBlades = tempGrassBlades.ToArray();
+            currentData.GrassBlades = tempGrassBlades.ToArray();
+            onPointsChanged?.Invoke();
+            currentData.RefreshRenderer();
         }
-        onPointsChanged?.Invoke();
-        currentObjectData.RefreshRenderer();
     }
 
     private void DrawPaintMarker(RaycastHit hit)
@@ -234,7 +169,7 @@ public class GrassTool
         SceneView.RepaintAll();
         Handles.color = originalColor;
     }
-    private List<GrassObjectData.GrassBladeData> FindPointsOnObject(GameObject obj, float density, Vector3 Position)
+    private List<GrassObjectData.GrassBladeData> FindPointsOnObject(float density, Vector3 Position)
     {
         List<GrassObjectData.GrassBladeData> points = new List<GrassObjectData.GrassBladeData>();
         int amount = (int)(density);
@@ -247,15 +182,17 @@ public class GrassTool
             RaycastHit hitInfo;
             if (Physics.Raycast(randomPoint, -Vector3.up, out hitInfo))
             {
-                if (hitInfo.collider.gameObject == obj)
+                Renderer rend = hitInfo.collider.GetComponent<Renderer>();
+                if (!rend)
                 {
-                    Vector3 pos = hitInfo.point;
-                    GrassObjectData.GrassBladeData data = new GrassObjectData.GrassBladeData();
-                    data.Position = pos;
-                    data.Light = SampleLightmap(hitInfo).grayscale;
-                    data.GroundColor = SampleTexture(hitInfo);
-                    points.Add(data);
+                    continue;
                 }
+                Vector3 pos = hitInfo.point;
+                GrassObjectData.GrassBladeData data = new GrassObjectData.GrassBladeData();
+                data.Position = pos;
+                data.Light = SampleLightmap(hitInfo).grayscale;
+                data.GroundColor = SampleTexture(hitInfo, (Texture2D)rend.sharedMaterial.mainTexture);
+                points.Add(data);
             }
             if (DrawGizmos)
             {
@@ -273,47 +210,34 @@ public class GrassTool
         return center;
     }
 
-    GrassObjectData ApplyData()
+    GrassObjectData ApplyData(GameObject obj)
     {
-        string filePath = GetFilePath();
+        string filePath = GetFilePath(obj);
         GrassObjectData currentObjectData = AssetDatabase.LoadAssetAtPath<GrassObjectData>(filePath);
         return currentObjectData;
     }
-    public void EndDraw()
-    {
-        //remove mesh collider
-        if (selectedObj)
-        {
-            Object.DestroyImmediate(selectedObj.GetComponent<MeshCollider>());
-        }
-        SaveData();
 
-    }
-    public void SaveData()
+    public void SaveData(GameObject selectedObj)
     {
-        string filePath = GetFilePath();
+        string filePath = GetFilePath(selectedObj);
         if (AssetDatabase.LoadAssetAtPath<GrassObjectData>(filePath) == null)
         {
-            AssetDatabase.CreateAsset(currentObjectData, filePath);
+            AssetDatabase.CreateAsset(selectedObjects[selectedObj], filePath);
         }
         else
         {
-            EditorUtility.SetDirty(currentObjectData);
+            EditorUtility.SetDirty(selectedObj);
             AssetDatabase.SaveAssets();
         }
     }
-    Color SampleTexture(RaycastHit hit)
+    Color SampleTexture(RaycastHit hit, Texture2D currentTexture)
     {
-
         Vector2 uv = hit.textureCoord;
-
         int x = Mathf.FloorToInt(uv.x * currentTexture.width);
         int y = Mathf.FloorToInt(uv.y * currentTexture.height);
         Color color = currentTexture.GetPixel(x, y);
         color = color.linear;
-
         return color;
-
     }
 
     private void SetTextureReadable(Texture2D texture, bool v)
@@ -363,7 +287,7 @@ public class GrassTool
         }
         return col;
     }
-    string GetFilePath()
+    string GetFilePath(GameObject selectedObj)
     {
         string scenePath = SceneManager.GetActiveScene().path;
         scenePath = scenePath.Replace(".unity", "");
@@ -378,5 +302,26 @@ public class GrassTool
     {
         if (!System.IO.Directory.Exists(scenePath + "/" + sceneName))
             System.IO.Directory.CreateDirectory(scenePath + "/" + sceneName);
+    }
+
+    public void StartDraw()
+    {
+        viewportCollider = new GrassToolViewPortCollider();
+        viewportCollider.OnGameObjectEnter = LoadData;
+    }
+    public void EndDraw()
+    {
+        List<GameObject> currentObjects = selectedObjects.Keys.ToList();
+        foreach (var item in currentObjects)
+        {
+            SaveData(item);
+        }
+        foreach (var item in currentObjects)
+        {
+            Texture2D texture = (Texture2D)item.GetComponent<Renderer>().sharedMaterial.mainTexture;
+            SetTextureReadable(texture, false);
+        }
+        viewportCollider.Dispose();
+        viewportCollider.OnGameObjectEnter = null;
     }
 }
