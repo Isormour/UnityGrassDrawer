@@ -11,7 +11,6 @@ public class GrassToolWindow : EditorWindow
     int tempHotControl = 0;
     static Mesh brushMesh;
     static Material brushMat;
-    static GameObject selectedObj;
 
     GrassTool tool;
     [MenuItem("Tools/GrassDrawer")]
@@ -23,9 +22,6 @@ public class GrassToolWindow : EditorWindow
     }
     void InitWindow()
     {
-        selectedObj = null;
-        // Selection.selectionChanged += OnSelectionChanged;
-
         LoadToolAssets();
         if (!brushMat || !brushMesh)
             return;
@@ -143,9 +139,6 @@ public class GrassToolWindow : EditorWindow
         if (startPaint)
         {
             EditorGUILayout.LabelField("Objects in viewport count = " + tool.viewportCollider.objectsInView.Count);
-            //        EditorGUILayout.LabelField("Grass Points = " + tool.currentObjectData.GrassBlades.Count());
-            //        EditorGUILayout.LabelField("Object Position = " + tool.currentObjectData.ObjectBounds.center);
-            //        EditorGUILayout.LabelField("ID = " + selectedObj.GetInstanceID());
         }
         EditorGUILayout.LabelField("");
     }

@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.ovsky.tarray": {
+      "version": "https://github.com/ovsky/TArray.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "715e6c918ca5ce7061603f24ee705ddba29fba2c"
+    },
     "com.unity.collab-proxy": {
       "version": "2.7.1",
       "depth": 0,

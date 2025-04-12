@@ -1,0 +1,24 @@
+// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel CSMain
+RWTexture2D<float4> _Result;
+Texture2D<float4> _Source;
+SamplerState samplerSource : register(s0);
+float2 _Coord;
+float _Radius;
+float _Mult;
+uint2 _TextureSize;
+
+[numthreads(8, 8, 1)]
+void CSMain(uint3 threadID : SV_DispatchThreadID)
+{
+    if (threadID.x >= _TextureSize.x || threadID.y >= _TextureSize.y)
+        return;
+    
+    float4 srcColor = _Result.Load(int3(threadID.xy, 0));
+    float2 uv = (float2(threadID.xy) + 0.5f) / float2(_TextureSize);
+    float dist = distance(uv, _Coord);
+    float gradient = saturate(1.0f - dist / _Radius);
+    float4 finalColor = srcColor + gradient * float4(1.0f, 1.0f, 1.0f, 1.0f) * _Mult;
+    finalColor = saturate(finalColor);
+    _Result[threadID.xy] = finalColor;
+}

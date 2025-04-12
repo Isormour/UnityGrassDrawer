@@ -8,12 +8,14 @@ public class ObjectGrassRenderer
     ComputeBuffer paramsBuffer;
     int instances;
 
-    [SerializeField] GrassObjectData data;
+    [SerializeField] GrassObjectChunk data;
     [SerializeField] Material drawMat;
     [SerializeField] Mesh drawMesh;
     BasicInstancedParams[] instanceParams;
     RenderParams renderParams;
-    public ObjectGrassRenderer(GrassObjectData data, Material drawMat, Mesh drawMesh)
+
+
+    public ObjectGrassRenderer(GrassObjectChunk data, Material drawMat, Mesh drawMesh)
     {
         this.data = data;
         this.drawMat = new Material(drawMat);
@@ -42,7 +44,7 @@ public class ObjectGrassRenderer
     // Update is called once per frame
     public void Update()
     {
-        if (data && drawMat && drawMesh && data.GrassBlades.Length > 0)
+        if (drawMat && drawMesh && data.GrassBlades.Length > 0)
             Draw();
     }
     public void Deinitialize()
@@ -61,7 +63,8 @@ public class ObjectGrassRenderer
 
     public void Draw()
     {
-        Graphics.RenderMeshIndirect(renderParams, drawMesh, commandBuf, 1);
+        if (instances > 0)
+            Graphics.RenderMeshIndirect(renderParams, drawMesh, commandBuf, 1);
     }
 
     private void InitializeRender()
@@ -86,5 +89,14 @@ public class ObjectGrassRenderer
         commandData[0].instanceCount = (uint)instances;
 
         commandBuf.SetData(commandData);
+    }
+    public void DrawGizmos()
+    {
+        foreach (var item in data.GrassBlades)
+        {
+            // Debug.DrawRay(item.Position, Vector3.up);
+        }
+        Vector3 center = data.ObjectBounds.center;
+        Gizmos.DrawCube(center, data.ObjectBounds.size + new Vector3(-0.5f, 1, -0.5f));
     }
 }
