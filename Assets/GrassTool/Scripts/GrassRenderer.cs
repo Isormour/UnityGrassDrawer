@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 
 [ExecuteInEditMode]
@@ -6,7 +7,7 @@ public class GrassRenderer : MonoBehaviour
     [SerializeField] GrassObjectData[] grassObjectData;
     [SerializeField] Material grassMat;
     [SerializeField] Mesh grassMesh;
-    ObjectGrassRenderer[][,] renderers;
+    public ObjectGrassRenderer[][,] renderers { private set; get; }
 
 #if UNITY_EDITOR
     public bool drawGizmos = false;
@@ -64,7 +65,8 @@ public class GrassRenderer : MonoBehaviour
             if (item != null)
                 foreach (var chunk in item)
                 {
-                    chunk?.Update();
+                    if (chunk.enabled)
+                        chunk.Update();
                 }
         }
 
@@ -94,6 +96,9 @@ public class GrassRenderer : MonoBehaviour
         {
             return;
         }
+        Vector2 min = Vector2.zero;
+        Vector2 max = Vector2.zero;
+
         foreach (var item in renderers)
         {
             if (item == null)
@@ -101,16 +106,54 @@ public class GrassRenderer : MonoBehaviour
                 return;
 
             int xLen = item.GetLength(0);
+            min = item[0, 0].ChunkData.ObjectBounds.center;
+            min.y = item[0, 0].ChunkData.ObjectBounds.center.z;
 
             for (int i = 0; i < xLen; i++)
             {
                 int yLen = item.GetLength(1);
+                max = item[xLen - 1, yLen - 1].ChunkData.ObjectBounds.center;
+                max.y = item[xLen - 1, yLen - 1].ChunkData.ObjectBounds.center.z;
+
                 for (int j = 0; j < yLen; j++)
                 {
-                    item[i, j].DrawGizmos();
+                    DrawGizmo(min, max, item[i, j]);
                 }
             }
         }
 
+    }
+
+    private static void DrawGizmo(Vector2 min, Vector2 max, ObjectGrassRenderer render)
+    {
+        Vector3 center = render.ChunkData.ObjectBounds.center;
+
+        Color col = Color.black;
+        col.a = 0.5f;
+        Vector2 point = render.ChunkData.ObjectBounds.center;
+        point.y = render.ChunkData.ObjectBounds.center.z;
+        Vector2 normPos = NormalizePosition(min, max, point);
+        col.r = normPos.x;
+        col.g = normPos.y;
+
+        var bounds = render.ChunkData.ObjectBounds;
+        Camera cam = SceneView.currentDrawingSceneView.camera;
+        UnityEngine.Plane[] planes = GeometryUtility.CalculateFrustumPlanes(Camera.main);
+        bool inBounds = GeometryUtility.TestPlanesAABB(planes, bounds);
+
+        if (inBounds)
+        {
+            Gizmos.color = col;
+            Gizmos.DrawCube(center, render.ChunkData.ObjectBounds.size + new Vector3(-0.5f, 1, -0.5f));
+        }
+    }
+    static public Vector2 NormalizePosition(Vector2 min, Vector2 max, Vector2 point)
+    {
+        Vector2 norm = Vector2.zero;
+        norm.x = max.x - min.x;
+        norm.x = point.x / norm.x;
+        norm.y = max.y - min.y;
+        norm.y = point.y / norm.y;
+        return norm;
     }
 }

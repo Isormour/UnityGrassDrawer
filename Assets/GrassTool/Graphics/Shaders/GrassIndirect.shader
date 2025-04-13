@@ -109,7 +109,6 @@ Shader "Custom/GrassIndirect"
                 float4 vpos = mul(UNITY_MATRIX_V, wpos);
                 float4 cpos = mul(UNITY_MATRIX_P, vpos);
                 
-                // Przypisanie warto�ci
                 o.vertex = cpos;
                 o.uv = v.uv;
                 o.lightning = _ParamsBuffer[ID].light;

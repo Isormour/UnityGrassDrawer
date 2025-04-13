@@ -44,8 +44,8 @@ public class GrassObjectData : ScriptableObject
         {
             Vector3 point = item.Position;
             Vector2 sizeDelta = new Vector2((ObjectBounds.size.x / ChunkSize.x), (ObjectBounds.size.z / ChunkSize.y));
-            float distX = Mathf.Abs(ObjectBounds.min.x) + Mathf.Abs(point.x);
-            float distZ = Mathf.Abs(ObjectBounds.min.z) + Mathf.Abs(point.z);
+            float distX = point.x - ObjectBounds.min.x;
+            float distZ = point.z - ObjectBounds.min.z;
             int chunkX = Mathf.RoundToInt(distX / ChunkSize.x);
             int chunkY = Mathf.RoundToInt(distZ / ChunkSize.y);
 
@@ -65,10 +65,18 @@ public class GrassObjectData : ScriptableObject
         OnRefreshRenderer?.Invoke();
     }
 
+    public GrassObjectChunk GetChunkByPosition(Vector3 point)
+    {
+        Vector2 sizeDelta = new Vector2((ObjectBounds.size.x / ChunkSize.x), (ObjectBounds.size.z / ChunkSize.y));
+        float distX = Mathf.Abs(ObjectBounds.min.x) + Mathf.Abs(point.x);
+        float distZ = Mathf.Abs(ObjectBounds.min.z) + Mathf.Abs(point.z);
+        int chunkX = Mathf.RoundToInt(distX / ChunkSize.x);
+        int chunkY = Mathf.RoundToInt(distZ / ChunkSize.y);
+        return chunks.Get(chunkX, chunkY);
+    }
     public void RemoveGrassBlades(Vector3 point, float distance)
     {
-        GrassObjectChunk selectedChunk = new GrassObjectChunk(new Bounds());
-        //todo Select proper chunk
+        GrassObjectChunk selectedChunk = GetChunkByPosition(point);
         List<GrassObjectChunk.GrassBladeData> tempGrassBlades = selectedChunk.GrassBlades.ToList();
         for (int i = 0; i < tempGrassBlades.Count; i++)
         {

@@ -9,22 +9,19 @@ public class GrassTool
 {
     public Dictionary<GameObject, GrassObjectData> selectedObjects { private set; get; }
     public int Density;
-
     Material brushMat;
     Mesh brushMesh;
-
-    public delegate void OnPointsChanged();
-    OnPointsChanged onPointsChanged;
     float brushScale = 1;
     public bool DrawGizmos = true;
     Vector2 chunkSize = new Vector2(100, 100);
+    public string grassName;
     public GrassToolViewPortCollider viewportCollider { private set; get; }
-    public GrassTool(Material brushMat, Mesh brushMesh, OnPointsChanged onPointsChanged)
+    public GrassTool(Material brushMat, Mesh brushMesh, string grassName)
     {
         this.brushMat = brushMat;
         this.brushMesh = brushMesh;
-        this.onPointsChanged = onPointsChanged;
         this.Density = 1;
+        this.grassName = grassName;
         selectedObjects = new Dictionary<GameObject, GrassObjectData>();
     }
 
@@ -310,7 +307,9 @@ public class GrassTool
         string sceneName = SceneManager.GetActiveScene().name;
         sceneName = sceneName.Replace(".unity", "");
         CheckDirectory(scenePath, sceneName);
-        string filePath = scenePath + "/" + sceneName + "_Grass" + "_" + selectedObj.GetInstanceID() + ".asset";
+
+
+        string filePath = $"{scenePath}/{grassName}_{sceneName}_{selectedObj.GetInstanceID()}.asset";
         return filePath;
     }
 

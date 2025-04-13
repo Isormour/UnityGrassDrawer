@@ -13,7 +13,9 @@ public class ObjectGrassRenderer
     [SerializeField] Mesh drawMesh;
     BasicInstancedParams[] instanceParams;
     RenderParams renderParams;
+    public bool enabled { private set; get; }
 
+    public GrassObjectChunk ChunkData => data;
 
     public ObjectGrassRenderer(GrassObjectChunk data, Material drawMat, Mesh drawMesh)
     {
@@ -24,11 +26,13 @@ public class ObjectGrassRenderer
         this.commandBuf = new GraphicsBuffer(GraphicsBuffer.Target.IndirectArguments, 1, GraphicsBuffer.IndirectDrawIndexedArgs.size);
         this.commandData = new GraphicsBuffer.IndirectDrawIndexedArgs[1];
         instanceParams = new BasicInstancedParams[instances];
+        enabled = instances > 0;
         if (instances > 0)
         {
             paramsBuffer = new ComputeBuffer(instances, GetStructSize(typeof(BasicInstancedParams)));
             InitializeRender();
         }
+
     }
     int GetStructSize(Type paramType)
     {
@@ -44,8 +48,7 @@ public class ObjectGrassRenderer
     // Update is called once per frame
     public void Update()
     {
-        if (drawMat && drawMesh && data.GrassBlades.Length > 0)
-            Draw();
+        Draw();
     }
     public void Deinitialize()
     {
@@ -63,8 +66,7 @@ public class ObjectGrassRenderer
 
     public void Draw()
     {
-        if (instances > 0)
-            Graphics.RenderMeshIndirect(renderParams, drawMesh, commandBuf, 1);
+        Graphics.RenderMeshIndirect(renderParams, drawMesh, commandBuf, 1);
     }
 
     private void InitializeRender()
@@ -89,14 +91,5 @@ public class ObjectGrassRenderer
         commandData[0].instanceCount = (uint)instances;
 
         commandBuf.SetData(commandData);
-    }
-    public void DrawGizmos()
-    {
-        foreach (var item in data.GrassBlades)
-        {
-            // Debug.DrawRay(item.Position, Vector3.up);
-        }
-        Vector3 center = data.ObjectBounds.center;
-        Gizmos.DrawCube(center, data.ObjectBounds.size + new Vector3(-0.5f, 1, -0.5f));
     }
 }

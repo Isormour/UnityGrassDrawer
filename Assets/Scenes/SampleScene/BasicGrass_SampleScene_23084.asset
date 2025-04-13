@@ -1,0 +1,1969 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85c6364eb75fedf4fb36a18d59f52fb0, type: 3}
+  m_Name: BasicGrass_SampleScene_23084
+  m_EditorClassIdentifier: 
+  chunks:
+    size: {x: 1, y: 1}
+    data:
+    - GrassBlades:
+      - Position: {x: 7.381914, y: 2.8980048, z: 13.812025}
+        Light: 1
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 3.5367417, y: 2.958776, z: 9.675396}
+        Light: 0.68303907
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 4.343954, y: 2.643938, z: 8.918268}
+        Light: 0.5870493
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 6.1857724, y: 2.0288715, z: 8.58112}
+        Light: 0.46834862
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 3.068535, y: 2.7563415, z: 10.109301}
+        Light: 0.2053949
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 3.0812273, y: 3.016551, z: 13.044019}
+        Light: 0.35269532
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 2.110207, y: 1.4486461, z: 11.449094}
+        Light: 0.0054563163
+        GroundColor: {r: 0.057805434, g: 0.057805434, b: 0.057805434, a: 1}
+      - Position: {x: 4.5299296, y: 2.249352, z: 8.59038}
+        Light: 0.50097024
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 4.605774, y: 3.442688, z: 9.666635}
+        Light: 0.8904722
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 3.0660918, y: 2.711591, z: 10.043394}
+        Light: 0.28872216
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 3.2533264, y: 3.3614585, z: 11.980912}
+        Light: 0.59711134
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 2.503182, y: 2.4227374, z: 12.665896}
+        Light: 0.1097384
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 3.2568088, y: 3.3180218, z: 12.433949}
+        Light: 0.5935205
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 4.441064, y: 3.2022738, z: 9.2727785}
+        Light: 0.84610355
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 7.4978175, y: 3.7376633, z: 11.734855}
+        Light: 0.29827344
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 6.118549, y: 4.0817823, z: 10.736757}
+        Light: 0.853416
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 3.256373, y: 2.1360836, z: 9.445411}
+        Light: 0.23558606
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 5.5005736, y: 4.044453, z: 10.527226}
+        Light: 0.9821699
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 5.052136, y: 4.0670047, z: 11.651239}
+        Light: 0.79158103
+        GroundColor: {r: 0, g: 0.095307484, b: 0, a: 1}
+      - Position: {x: 6.1875796, y: 3.792047, z: 9.928859}
+        Light: 0.8574815
+        GroundColor: {r: 0, g: 0.09989874, b: 0, a: 1}
+      - Position: {x: 6.5978346, y: 3.3999674, z: 13.491582}
+        Light: 0.49983105
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 4.1296844, y: 3.3514404, z: 10.318941}
+        Light: 0.8135576
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 5.4288816, y: 1.9984126, z: 14.760437}
+        Light: 0.22076526
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 3.4206657, y: 2.992527, z: 9.8467655}
+        Light: 0.66265917
+        GroundColor: {r: 0, g: 0.09305898, b: 0, a: 1}
+      - Position: {x: 7.548342, y: 2.2497172, z: 9.745165}
+        Light: 0.0005355501
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 3.0222404, y: 3.1913521, z: 12.106896}
+        Light: 0.56271046
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 4.583377, y: 2.4161346, z: 8.621281}
+        Light: 0.53436184
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 6.8107214, y: 3.5950565, z: 10.196424}
+        Light: 0.3667302
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 7.4463634, y: 3.5858793, z: 12.393497}
+        Light: 0.45093822
+        GroundColor: {r: 0, g: 0.06480328, b: 0, a: 1}
+      - Position: {x: 2.3737245, y: 2.5206156, z: 12.2836685}
+        Light: 0.11310675
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 6.2276607, y: 3.175163, z: 9.3172655}
+        Light: 0.63587207
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 3.6720665, y: 1.5125821, z: 8.924057}
+        Light: 0.27105567
+        GroundColor: {r: 0.022173883, g: 0.06662595, b: 0.022173883, a: 1}
+      - Position: {x: 5.105626, y: 2.420056, z: 14.398927}
+        Light: 0.21334754
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 5.049421, y: 3.834085, z: 10.44131}
+        Light: 0.88809276
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 4.047902, y: 1.6941345, z: 8.748941}
+        Light: 0.35945314
+        GroundColor: {r: 0, g: 0.05951124, b: 0, a: 1}
+      - Position: {x: 3.0640175, y: 2.5008843, z: 14.059994}
+        Light: 0.2055996
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 6.342795, y: 2.5490642, z: 8.916265}
+        Light: 0.4025276
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 7.5560884, y: 3.8110032, z: 11.196014}
+        Light: 0.3108174
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 2.1840696, y: 1.6129935, z: 11.4275055}
+        Light: 0.009539124
+        GroundColor: {r: 0.05448028, g: 0.06662595, b: 0.05448028, a: 1}
+      - Position: {x: 5.1700697, y: 1.9670537, z: 14.776107}
+        Light: 0.21509948
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 7.2337184, y: 3.4878948, z: 12.915541}
+        Light: 0.63462645
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 6.892246, y: 2.230737, z: 9.1415825}
+        Light: 0.009985863
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 4.7928224, y: 3.2663975, z: 9.156783}
+        Light: 0.8869702
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 4.9114795, y: 3.5057306, z: 9.656862}
+        Light: 1.0655352
+        GroundColor: {r: 0, g: 0.06301003, b: 0, a: 1}
+      - Position: {x: 7.3580813, y: 4.036319, z: 11.31272}
+        Light: 0.42294875
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 5.481836, y: 3.063192, z: 8.767101}
+        Light: 0.9196914
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 6.328206, y: 4.1193533, z: 10.96772}
+        Light: 0.83897704
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 6.499607, y: 2.9621158, z: 9.343483}
+        Light: 0.40144044
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 5.6821756, y: 3.2339556, z: 8.993729}
+        Light: 0.9265386
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 5.061369, y: 4.0351405, z: 10.795508}
+        Light: 0.878459
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 5.6502724, y: 3.900056, z: 10.1181755}
+        Light: 0.94656396
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 3.1475751, y: 3.1641595, z: 10.994094}
+        Light: 0.4937361
+        GroundColor: {r: 0, g: 0.09305898, b: 0, a: 1}
+      - Position: {x: 4.222597, y: 2.1005492, z: 8.786022}
+        Light: 0.42217213
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 7.0529146, y: 3.595821, z: 12.878108}
+        Light: 0.6521616
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 6.058627, y: 2.796281, z: 8.890939}
+        Light: 0.63865286
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 6.8368735, y: 3.3682327, z: 13.483931}
+        Light: 0.5191455
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 5.6368732, y: 3.6884332, z: 9.611923}
+        Light: 0.96893555
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 7.7341623, y: 2.9680946, z: 12.633946}
+        Light: 0.17590638
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 4.0474653, y: 3.2713816, z: 9.97496}
+        Light: 0.9657798
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 5.214179, y: 4.1292205, z: 11.888633}
+        Light: 0.7956353
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 3.391656, y: 3.3437314, z: 11.08279}
+        Light: 0.61991847
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 8.021985, y: 1.6714566, z: 12.991812}
+        Light: 0.020761184
+        GroundColor: {r: 0, g: 0.06301003, b: 0, a: 1}
+      - Position: {x: 5.654643, y: 3.395006, z: 9.112163}
+        Light: 0.8483994
+        GroundColor: {r: 0, g: 0.05951124, b: 0, a: 1}
+      - Position: {x: 3.3032072, y: 3.2799354, z: 12.66063}
+        Light: 0.56990916
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 7.787524, y: 2.3937325, z: 13.356822}
+        Light: 0.23334022
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 3.6052923, y: 2.2317195, z: 9.307623}
+        Light: 0.3842014
+        GroundColor: {r: 0, g: 0.06124607, b: 0, a: 1}
+      - Position: {x: 6.0621033, y: 4.1472015, z: 12.245019}
+        Light: 0.74356395
+        GroundColor: {r: 0, g: 0.09084173, b: 0, a: 1}
+      - Position: {x: 6.9578676, y: 3.6346118, z: 12.924726}
+        Light: 0.6620439
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 7.2394257, y: 4.07831, z: 11.531772}
+        Light: 0.643749
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 3.7203658, y: 3.2582552, z: 10.241068}
+        Light: 0.8812144
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 3.4642415, y: 1.884064, z: 9.226789}
+        Light: 0.23513062
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 3.461399, y: 1.5555725, z: 9.073925}
+        Light: 0.19042249
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 3.6186237, y: 1.9981229, z: 9.19735}
+        Light: 0.3634551
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 5.855909, y: 3.7986696, z: 9.726295}
+        Light: 0.9479956
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 4.175208, y: 3.4182897, z: 10.6378765}
+        Light: 0.6518457
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 3.798526, y: 1.948781, z: 9.055511}
+        Light: 0.3798523
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 5.2998223, y: 3.4357805, z: 9.261398}
+        Light: 0.94658154
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 5.116545, y: 2.5446997, z: 8.329657}
+        Light: 0.8129439
+        GroundColor: {r: 0, g: 0.05951124, b: 0, a: 1}
+      - Position: {x: 4.9705725, y: 2.8025374, z: 8.541697}
+        Light: 0.84910303
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 4.5788865, y: 3.543043, z: 10.496999}
+        Light: 0.5594375
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 3.4377465, y: 2.6304703, z: 9.545333}
+        Light: 0.5193916
+        GroundColor: {r: 0, g: 0.084376216, b: 0, a: 1}
+      - Position: {x: 3.498973, y: 2.0747714, z: 9.2975445}
+        Light: 0.28878516
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 3.1251338, y: 3.268626, z: 12.042134}
+        Light: 0.59006935
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 3.64729, y: 2.1564622, z: 9.257219}
+        Light: 0.42023048
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 6.217558, y: 2.9630625, z: 9.128848}
+        Light: 0.60070217
+        GroundColor: {r: 0, g: 0.06301003, b: 0, a: 1}
+      - Position: {x: 4.110571, y: 3.3018596, z: 10.050679}
+        Light: 0.8135576
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 3.0764987, y: 2.5391552, z: 9.736128}
+        Light: 0.28872216
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 4.5710793, y: 3.4239872, z: 9.660794}
+        Light: 0.8904722
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 3.7422345, y: 1.2100396, z: 8.746658}
+        Light: 0.15634423
+        GroundColor: {r: 0.045186203, g: 0.06301003, b: 0.045186203, a: 1}
+      - Position: {x: 2.4944215, y: 2.0739849, z: 11.1592045}
+        Light: 0.09717011
+        GroundColor: {r: 0.000607054, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 2.92023, y: 3.1055503, z: 12.128991}
+        Light: 0.5136028
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 4.057897, y: 2.5238907, z: 9.11075}
+        Light: 0.5437305
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 5.0846705, y: 3.7561703, z: 10.277017}
+        Light: 0.93023926
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 2.8586164, y: 2.579258, z: 10.770548}
+        Light: 0.1524192
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 5.6205873, y: 3.9212568, z: 12.589449}
+        Light: 0.6772583
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 4.4198422, y: 3.949125, z: 11.566291}
+        Light: 0.54441893
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 2.9279914, y: 3.151979, z: 12.326705}
+        Light: 0.55419534
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 4.41745, y: 4.0107646, z: 11.429111}
+        Light: 0.83545995
+        GroundColor: {r: 0, g: 0.084376216, b: 0, a: 1}
+      - Position: {x: 6.505082, y: 3.9500434, z: 12.688317}
+        Light: 0.70867187
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 5.130437, y: 2.804345, z: 8.504633}
+        Light: 0.92261523
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 7.575771, y: 2.9670122, z: 13.392302}
+        Light: 0.4630996
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 3.687087, y: 2.2132635, z: 14.494717}
+        Light: 0.20837598
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 7.541744, y: 2.49992, z: 13.903509}
+        Light: 0.31420362
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 2.3319633, y: 2.4949038, z: 11.940695}
+        Light: 0.18360718
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 2.3450787, y: 2.4722664, z: 12.284181}
+        Light: 0.11310675
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 2.7332022, y: 2.6443129, z: 12.881337}
+        Light: 0.14481574
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 2.54619, y: 2.5258334, z: 12.621326}
+        Light: 0.13090815
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 2.5681696, y: 2.1266558, z: 13.26207}
+        Light: 0.108529724
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 3.248528, y: 2.988983, z: 13.567772}
+        Light: 0.3652954
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 2.9506404, y: 2.615369, z: 13.599528}
+        Light: 0.20301172
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 2.7135606, y: 2.6461463, z: 12.834724}
+        Light: 0.14481574
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 2.410563, y: 1.9278765, z: 13.126955}
+        Light: 0.087845184
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 2.3785336, y: 1.9110415, z: 13.067488}
+        Light: 0.073196165
+        GroundColor: {r: 0.010960094, g: 0.06124607, b: 0.010960094, a: 1}
+      - Position: {x: 2.2095582, y: 1.8261089, z: 12.767805}
+        Light: 0.050158203
+        GroundColor: {r: 0.010960094, g: 0.07421358, b: 0.010960094, a: 1}
+      - Position: {x: 2.47821, y: 2.1748562, z: 12.95159}
+        Light: 0.10404199
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 2.8553228, y: 2.5076504, z: 13.4935055}
+        Light: 0.16601239
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 2.486818, y: 2.0008538, z: 13.220021}
+        Light: 0.09435645
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 2.8412719, y: 2.3130214, z: 13.775235}
+        Light: 0.15948297
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 2.6309068, y: 2.2649705, z: 13.225694}
+        Light: 0.124471255
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 4.68488, y: 3.6319315, z: 10.489541}
+        Light: 0.26832765
+        GroundColor: {r: 0, g: 0.084376216, b: 0, a: 1}
+      - Position: {x: 4.9266047, y: 3.5974934, z: 9.928905}
+        Light: 1.0655352
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 5.210999, y: 3.706683, z: 10.032521}
+        Light: 0.89040184
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 4.890233, y: 3.7561746, z: 10.412545}
+        Light: 0.8105244
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 4.882365, y: 3.482536, z: 9.599517}
+        Light: 0.9115801
+        GroundColor: {r: 0, g: 0.06301003, b: 0, a: 1}
+      - Position: {x: 4.75003, y: 3.4600458, z: 9.604683}
+        Light: 0.90618753
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 4.7024937, y: 3.6325226, z: 10.4315405}
+        Light: 0.26832765
+        GroundColor: {r: 0, g: 0.09084173, b: 0, a: 1}
+      - Position: {x: 5.9603605, y: 4.074038, z: 10.451}
+        Light: 0.95686865
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 5.00001, y: 3.512884, z: 9.626314}
+        Light: 0.92070264
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 4.9666333, y: 3.7115667, z: 10.243494}
+        Light: 0.87048
+        GroundColor: {r: 0.000607054, g: 0.06480328, b: 0, a: 1}
+      - Position: {x: 4.7079983, y: 3.3533764, z: 9.367419}
+        Light: 0.8869702
+        GroundColor: {r: 0, g: 0.06301003, b: 0, a: 1}
+      - Position: {x: 5.0656557, y: 3.8852375, z: 10.516366}
+        Light: 0.8564312
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 4.992662, y: 3.7006454, z: 10.205032}
+        Light: 1.0474981
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 5.073441, y: 3.7858799, z: 10.345784}
+        Light: 0.88809276
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 5.228991, y: 3.781911, z: 10.210111}
+        Light: 0.90214163
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 4.977637, y: 3.7333038, z: 10.292312}
+        Light: 0.87048
+        GroundColor: {r: 0.000607054, g: 0.06480328, b: 0, a: 1}
+      - Position: {x: 5.639912, y: 3.6926143, z: 9.619084}
+        Light: 0.96893555
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 4.5439577, y: 3.4295707, z: 9.717307}
+        Light: 0.83873534
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 4.8738203, y: 4.0474315, z: 11.128143}
+        Light: 0.92017967
+        GroundColor: {r: 0, g: 0.09084173, b: 0, a: 1}
+      - Position: {x: 4.5855937, y: 3.483679, z: 9.877846}
+        Light: 0.83873534
+        GroundColor: {r: 0, g: 0.05951124, b: 0, a: 1}
+      - Position: {x: 4.9820795, y: 3.7789772, z: 10.382455}
+        Light: 0.88809276
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 4.194814, y: 3.3906655, z: 10.572181}
+        Light: 0.6518457
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 4.772242, y: 3.7255635, z: 10.548353}
+        Light: 0.5594375
+        GroundColor: {r: 0, g: 0.09084173, b: 0, a: 1}
+      - Position: {x: 5.0719066, y: 3.7151744, z: 10.193439}
+        Light: 0.93023926
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 4.145795, y: 3.3375766, z: 10.234653}
+        Light: 0.71977395
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 4.996631, y: 3.7645786, z: 10.346527}
+        Light: 0.87048
+        GroundColor: {r: 0.000607054, g: 0.06480328, b: 0, a: 1}
+      - Position: {x: 5.0812483, y: 3.6389325, z: 9.958564}
+        Light: 1.0227568
+        GroundColor: {r: 0, g: 0.05951124, b: 0, a: 1}
+      - Position: {x: 5.2047534, y: 3.5139685, z: 9.504498}
+        Light: 0.91395706
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 5.5796523, y: 3.6775286, z: 9.621471}
+        Light: 0.94658154
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 5.0265713, y: 3.8097835, z: 10.4123335}
+        Light: 0.88809276
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 6.3706717, y: 4.0880704, z: 10.447697}
+        Light: 1.0121709
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 6.3914566, y: 3.0019546, z: 9.291354}
+        Light: 0.4672317
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 6.5346346, y: 3.2614224, z: 9.650838}
+        Light: 0.4139961
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 6.708583, y: 3.6626325, z: 10.189756}
+        Light: 0.4445188
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 5.9380383, y: 4.062294, z: 10.719866}
+        Light: 0.853416
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 6.757682, y: 3.8941402, z: 10.48652}
+        Light: 0.57828224
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 6.790424, y: 4.064153, z: 10.737354}
+        Light: 0.8354902
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 6.3022976, y: 3.641854, z: 9.847681}
+        Light: 0.7215469
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 6.810335, y: 3.3630297, z: 9.977627}
+        Light: 0.14510389
+        GroundColor: {r: 0, g: 0.06124607, b: 0, a: 1}
+      - Position: {x: 6.425039, y: 3.7166162, z: 10.027466}
+        Light: 0.706645
+        GroundColor: {r: 0, g: 0.084376216, b: 0, a: 1}
+      - Position: {x: 6.470988, y: 3.8703442, z: 10.243128}
+        Light: 0.76922464
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 6.3537602, y: 3.7732494, z: 10.037333}
+        Light: 0.706645
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 6.8660755, y: 3.532997, z: 10.173844}
+        Light: 0.3667302
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 6.653155, y: 3.7625434, z: 10.253487}
+        Light: 0.57828224
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 6.805499, y: 3.1063504, z: 9.741322}
+        Light: 0.18166503
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 6.2017546, y: 3.8957005, z: 10.070356}
+        Light: 0.92508984
+        GroundColor: {r: 0, g: 0.09084173, b: 0, a: 1}
+      - Position: {x: 6.5122643, y: 4.097598, z: 10.569902}
+        Light: 0.91314894
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 6.564049, y: 3.8646128, z: 10.306395}
+        Light: 0.74504346
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 6.0796385, y: 3.905218, z: 9.986405}
+        Light: 0.9457383
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 7.1363726, y: 4.018731, z: 10.963873}
+        Light: 0.48439673
+        GroundColor: {r: 0, g: 0.086500466, b: 0, a: 1}
+      - Position: {x: 6.538201, y: 4.132777, z: 10.928617}
+        Light: 0.89166653
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 6.301189, y: 4.100618, z: 10.693984}
+        Light: 0.87825537
+        GroundColor: {r: 0, g: 0.06301003, b: 0, a: 1}
+      - Position: {x: 6.948263, y: 3.2845504, z: 10.011913}
+        Light: 0.013388008
+        GroundColor: {r: 0, g: 0.05951124, b: 0, a: 1}
+      - Position: {x: 7.016282, y: 2.4085567, z: 9.3892}
+        Light: 0.0041805594
+        GroundColor: {r: 0.000607054, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 6.926718, y: 2.5904791, z: 9.445176}
+        Light: 0.010631729
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 6.816303, y: 2.8602254, z: 9.552617}
+        Light: 0.0769372
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 6.98181, y: 2.180292, z: 9.188412}
+        Light: 0.0036347848
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 6.2753654, y: 2.5187128, z: 8.8431425}
+        Light: 0.46279982
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 6.718853, y: 2.7842185, z: 9.405389}
+        Light: 0.18968262
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 6.454605, y: 2.3484743, z: 8.866487}
+        Light: 0.31787476
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 6.565653, y: 3.0422971, z: 9.471553}
+        Light: 0.35514307
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 6.855152, y: 2.2843626, z: 9.147275}
+        Light: 0.009985863
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 7.0285063, y: 2.2762413, z: 9.303037}
+        Light: 0.0033449621
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 4.0421953, y: 3.2037132, z: 9.7577305}
+        Light: 0.8325083
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 4.6266174, y: 3.4779572, z: 9.751136}
+        Light: 1.0524619
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 4.8130198, y: 3.2637744, z: 9.14409}
+        Light: 0.8869702
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 4.775174, y: 3.51334, z: 9.741525}
+        Light: 0.9936367
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 4.6703115, y: 3.4389625, z: 9.592978}
+        Light: 0.90618753
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 4.9561405, y: 3.6477025, z: 10.068158}
+        Light: 0.9937871
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 4.712394, y: 3.223799, z: 9.1159115}
+        Light: 0.8869702
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 4.6737814, y: 3.4129863, z: 9.528444}
+        Light: 0.90618753
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 4.739554, y: 3.5297751, z: 9.807553}
+        Light: 1.2206367
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 4.0037107, y: 3.1301153, z: 9.600728}
+        Light: 0.816459
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 4.1907797, y: 2.9171026, z: 9.159889}
+        Light: 0.666689
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 4.863275, y: 3.417945, z: 9.4481535}
+        Light: 0.898855
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 4.4598503, y: 3.2580676, z: 9.368357}
+        Light: 0.8635064
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 4.3214035, y: 3.3746, z: 9.998513}
+        Light: 0.4635044
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 4.016464, y: 3.3114252, z: 10.261052}
+        Light: 0.8135576
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 4.894038, y: 3.4541652, z: 9.519498}
+        Light: 0.898855
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 4.5276337, y: 3.324782, z: 9.457719}
+        Light: 0.8635064
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 4.711827, y: 3.498349, z: 9.7245655}
+        Light: 1.0149668
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 4.5492287, y: 3.4454396, z: 9.781658}
+        Light: 0.83873534
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 3.9290247, y: 3.1046917, z: 9.60394}
+        Light: 0.816459
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 3.7576907, y: 3.0046337, z: 9.560271}
+        Light: 0.71477735
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 5.096038, y: 3.6961296, z: 10.120237}
+        Light: 0.93023926
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 4.6702504, y: 3.6064868, z: 10.319315}
+        Light: 0.60816795
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 3.933728, y: 3.0534961, z: 9.489752}
+        Light: 0.7803984
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 4.2744446, y: 2.2573895, z: 8.813716}
+        Light: 0.4614634
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 4.4463115, y: 3.455213, z: 10.07984}
+        Light: 0.7359873
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 5.1525497, y: 3.2985418, z: 9.067806}
+        Light: 0.9439175
+        GroundColor: {r: 0, g: 0.09084173, b: 0, a: 1}
+      - Position: {x: 4.4703665, y: 3.3324823, z: 9.547703}
+        Light: 0.8536851
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 4.559226, y: 3.513564, z: 10.084162}
+        Light: 0.52223146
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 4.73147, y: 3.4805708, z: 9.663467}
+        Light: 0.9576377
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 3.515195, y: 2.9860241, z: 9.745425}
+        Light: 0.7214927
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 3.5087953, y: 3.3449726, z: 10.576138}
+        Light: 0.7834766
+        GroundColor: {r: 0, g: 0.09084173, b: 0, a: 1}
+      - Position: {x: 3.8582716, y: 3.4272842, z: 10.646442}
+        Light: 0.9195347
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 3.3155632, y: 3.0893214, z: 10.146614}
+        Light: 0.633667
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 3.611987, y: 3.2877367, z: 10.39918}
+        Light: 0.8812144
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 3.8536012, y: 3.2674675, z: 10.169444}
+        Light: 0.8604946
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 3.3123102, y: 3.290273, z: 11.009267}
+        Light: 0.5882373
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 3.473425, y: 3.3447142, z: 10.600626}
+        Light: 0.7834766
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 3.380492, y: 2.9997115, z: 9.897907}
+        Light: 0.66265917
+        GroundColor: {r: 0, g: 0.09305898, b: 0, a: 1}
+      - Position: {x: 4.0424423, y: 3.355948, z: 10.441528}
+        Light: 0.8604946
+        GroundColor: {r: 0, g: 0.09305898, b: 0, a: 1}
+      - Position: {x: 3.285244, y: 3.2871068, z: 10.598232}
+        Light: 0.6923125
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 3.7887175, y: 3.094334, z: 9.72003}
+        Light: 0.8325083
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 3.098702, y: 3.1699922, z: 10.693594}
+        Light: 0.5882373
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 2.7477796, y: 2.2112305, z: 10.70373}
+        Light: 0.11392896
+        GroundColor: {r: 0, g: 0.06301003, b: 0, a: 1}
+      - Position: {x: 3.7630327, y: 3.6871288, z: 11.355799}
+        Light: 0.6577251
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 3.7364051, y: 3.339692, z: 10.478632}
+        Light: 0.8812144
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 3.5795088, y: 3.3685088, z: 10.598379}
+        Light: 0.7834766
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 3.6243677, y: 3.3483136, z: 10.534742}
+        Light: 0.84544337
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 3.9944947, y: 3.2613275, z: 10.038969}
+        Light: 0.9657798
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 4.2133164, y: 3.8697383, z: 11.244787}
+        Light: 0.8434561
+        GroundColor: {r: 0, g: 0.09989874, b: 0, a: 1}
+      - Position: {x: 4.0899734, y: 3.283943, z: 9.966432}
+        Light: 0.9188428
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 3.647998, y: 3.1950946, z: 10.122316}
+        Light: 0.89361966
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 3.6046739, y: 3.3100922, z: 10.453683}
+        Light: 0.84544337
+        GroundColor: {r: 0, g: 0.09084173, b: 0, a: 1}
+      - Position: {x: 3.021118, y: 2.859659, z: 10.466132}
+        Light: 0.20122828
+        GroundColor: {r: 0, g: 0.084376216, b: 0, a: 1}
+      - Position: {x: 4.4156675, y: 3.4373262, z: 10.269661}
+        Light: 0.16004883
+        GroundColor: {r: 0, g: 0.084376216, b: 0, a: 1}
+      - Position: {x: 3.3176286, y: 3.3405719, z: 10.75377}
+        Light: 0.6524106
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 3.6842775, y: 3.4856374, z: 10.831996}
+        Light: 0.8160708
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 3.3783457, y: 3.3841646, z: 10.761171}
+        Light: 0.6597183
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 3.8196383, y: 3.5064971, z: 12.3840885}
+        Light: 0.6833984
+        GroundColor: {r: 0, g: 0.084376216, b: 0, a: 1}
+      - Position: {x: 3.7817996, y: 3.649413, z: 11.833547}
+        Light: 0.59593654
+        GroundColor: {r: 0, g: 0.09084173, b: 0, a: 1}
+      - Position: {x: 3.029187, y: 3.1568696, z: 11.94306}
+        Light: 0.59006935
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 3.8596158, y: 3.4896643, z: 12.67191}
+        Light: 0.70272464
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 3.865998, y: 3.7717628, z: 11.573752}
+        Light: 0.5874668
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 2.5621667, y: 2.600978, z: 12.553746}
+        Light: 0.13090815
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 3.8365207, y: 3.6940887, z: 11.743964}
+        Light: 0.5874668
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 2.703851, y: 2.8534317, z: 11.870708}
+        Light: 0.47079566
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 3.5512562, y: 3.5239484, z: 12.057151}
+        Light: 0.6017017
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 3.965592, y: 3.5339324, z: 12.336155}
+        Light: 0.66537404
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 3.1414526, y: 3.3113656, z: 12.187564}
+        Light: 0.5744268
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 3.188851, y: 3.335098, z: 12.087349}
+        Light: 0.59006935
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 3.6280432, y: 3.6227882, z: 11.715076}
+        Light: 0.59633106
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 3.9073958, y: 3.7194617, z: 11.708356}
+        Light: 0.5874668
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 2.8773565, y: 2.9471717, z: 11.553429}
+        Light: 0.53501415
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 3.4777617, y: 3.5270216, z: 11.955356}
+        Light: 0.63702196
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 3.1979063, y: 3.3465433, z: 12.2024145}
+        Light: 0.5839824
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 3.3141515, y: 3.4308271, z: 12.09445}
+        Light: 0.6249902
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 3.5124083, y: 3.3312697, z: 12.911447}
+        Light: 0.5933394
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 3.7690823, y: 3.6822338, z: 11.740936}
+        Light: 0.6042837
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 2.6110601, y: 2.7588727, z: 11.809749}
+        Light: 0.4025896
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 3.3891363, y: 3.436397, z: 11.853946}
+        Light: 0.62846434
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 3.2224767, y: 3.360552, z: 12.067105}
+        Light: 0.59711134
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 2.808968, y: 3.04998, z: 12.327268}
+        Light: 0.3869922
+        GroundColor: {r: 0, g: 0.06301003, b: 0, a: 1}
+      - Position: {x: 3.5717945, y: 3.4465437, z: 12.374035}
+        Light: 0.63979495
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 3.2140453, y: 3.3462114, z: 12.035716}
+        Light: 0.59711134
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 3.5064483, y: 3.347197, z: 12.813913}
+        Light: 0.5933394
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 3.2936835, y: 3.384192, z: 12.240584}
+        Light: 0.5839824
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 3.139191, y: 3.2898817, z: 12.08231}
+        Light: 0.59006935
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 3.3023446, y: 3.4111485, z: 12.003579}
+        Light: 0.6065
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 3.5370111, y: 3.4881594, z: 12.181797}
+        Light: 0.6017017
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 3.4078507, y: 3.3161063, z: 12.717181}
+        Light: 0.6062588
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 2.5556848, y: 2.6034567, z: 12.535515}
+        Light: 0.13090815
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 2.9579992, y: 3.1048803, z: 12.596138}
+        Light: 0.41554004
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 2.8481135, y: 2.922955, z: 11.492469}
+        Light: 0.4660818
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 3.3344622, y: 3.4171882, z: 12.181593}
+        Light: 0.6017017
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 2.8918352, y: 3.108287, z: 12.257114}
+        Light: 0.44861376
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 3.4049492, y: 3.3799393, z: 12.444949}
+        Light: 0.62066895
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 3.420755, y: 3.465877, z: 12.117878}
+        Light: 0.57528174
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 3.0589545, y: 3.010953, z: 13.001667}
+        Light: 0.35269532
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 3.711696, y: 3.5481641, z: 12.10821}
+        Light: 0.63702196
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 3.1250322, y: 3.2552922, z: 11.9910555}
+        Light: 0.59006935
+        GroundColor: {r: 0, g: 0.05951124, b: 0, a: 1}
+      - Position: {x: 2.4792714, y: 2.6930845, z: 12.204198}
+        Light: 0.16493738
+        GroundColor: {r: 0, g: 0.05951124, b: 0, a: 1}
+      - Position: {x: 2.9248323, y: 3.0590432, z: 11.917952}
+        Light: 0.59006935
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 3.1378589, y: 3.3089168, z: 12.208641}
+        Light: 0.5744268
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 2.9380736, y: 2.9150116, z: 12.9654665}
+        Light: 0.26720923
+        GroundColor: {r: 0, g: 0.06301003, b: 0, a: 1}
+      - Position: {x: 2.9330425, y: 3.0360074, z: 11.798221}
+        Light: 0.55552197
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 2.789283, y: 2.7192023, z: 12.904302}
+        Light: 0.16411316
+        GroundColor: {r: 0.000607054, g: 0.06480328, b: 0, a: 1}
+      - Position: {x: 3.268827, y: 3.293473, z: 12.55012}
+        Light: 0.56990916
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 2.639503, y: 2.6484082, z: 12.664638}
+        Light: 0.14481574
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 3.10633, y: 3.110422, z: 11.487312}
+        Light: 0.53501415
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 3.5990033, y: 3.3957129, z: 12.793216}
+        Light: 0.6480191
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 3.3388822, y: 3.321418, z: 11.65179}
+        Light: 0.5656123
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 3.9501357, y: 3.7222478, z: 11.7243395}
+        Light: 0.56640136
+        GroundColor: {r: 0, g: 0.09305898, b: 0, a: 1}
+      - Position: {x: 3.1211011, y: 3.1924174, z: 12.667641}
+        Light: 0.46422362
+        GroundColor: {r: 0, g: 0.05951124, b: 0, a: 1}
+      - Position: {x: 2.2774272, y: 2.3582902, z: 12.285141}
+        Light: 0.085493684
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 4.024726, y: 3.5535066, z: 12.242799}
+        Light: 0.66537404
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 3.6264653, y: 3.5789084, z: 11.911231}
+        Light: 0.57528174
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 3.1606343, y: 3.1446466, z: 11.395158}
+        Light: 0.5109292
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 3.1153815, y: 3.193128, z: 12.653414}
+        Light: 0.46422362
+        GroundColor: {r: 0, g: 0.05951124, b: 0, a: 1}
+      - Position: {x: 3.674056, y: 3.6592863, z: 11.733201}
+        Light: 0.6152256
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 3.3164256, y: 3.3603399, z: 12.371406}
+        Light: 0.56990916
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 2.5625484, y: 2.4214392, z: 12.803238}
+        Light: 0.1227063
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 3.2064567, y: 3.092184, z: 13.151702}
+        Light: 0.41710865
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 3.137075, y: 3.1479566, z: 11.607758}
+        Light: 0.54871047
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 4.0700355, y: 3.5615752, z: 12.786753}
+        Light: 0.72178274
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 3.2136166, y: 3.3651092, z: 12.12941}
+        Light: 0.59006935
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 2.6347737, y: 2.7728846, z: 11.724345}
+        Light: 0.3375376
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 3.2125828, y: 3.2817929, z: 12.491242}
+        Light: 0.5464439
+        GroundColor: {r: 0, g: 0.09084173, b: 0, a: 1}
+      - Position: {x: 3.9283617, y: 3.605231, z: 11.999137}
+        Light: 0.6081309
+        GroundColor: {r: 0, g: 0.086500466, b: 0, a: 1}
+      - Position: {x: 2.8628843, y: 3.0318043, z: 12.02451}
+        Light: 0.52234423
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 3.5140104, y: 3.2787554, z: 13.188108}
+        Light: 0.45252392
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 3.3577728, y: 3.329268, z: 11.627662}
+        Light: 0.5656123
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 3.3917387, y: 3.1619945, z: 13.335808}
+        Light: 0.42653954
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 3.597926, y: 3.4548357, z: 12.366187}
+        Light: 0.66734666
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 2.8836756, y: 2.7088149, z: 13.208483}
+        Light: 0.16601239
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 2.6572118, y: 2.8655643, z: 12.144791}
+        Light: 0.36440063
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 3.057079, y: 3.2110355, z: 12.055273}
+        Light: 0.59006935
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 2.7464683, y: 2.6857662, z: 12.854143}
+        Light: 0.14481574
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 3.283563, y: 3.2074153, z: 12.953779}
+        Light: 0.48112866
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 2.8383226, y: 2.764753, z: 12.95463}
+        Light: 0.16411316
+        GroundColor: {r: 0.000607054, g: 0.06480328, b: 0, a: 1}
+      - Position: {x: 3.4525032, y: 3.3782177, z: 12.5266}
+        Light: 0.62066895
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 2.4577727, y: 2.174522, z: 12.905523}
+        Light: 0.09020792
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 2.7870085, y: 3.0420263, z: 12.380211}
+        Light: 0.3869922
+        GroundColor: {r: 0, g: 0.06301003, b: 0, a: 1}
+      - Position: {x: 3.668514, y: 3.5008295, z: 12.254157}
+        Light: 0.63702196
+        GroundColor: {r: 0, g: 0.084376216, b: 0, a: 1}
+      - Position: {x: 3.8776767, y: 3.5886889, z: 12.035752}
+        Light: 0.6305557
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 3.8026958, y: 3.5726461, z: 12.068898}
+        Light: 0.6415396
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 2.786645, y: 2.6760514, z: 12.957686}
+        Light: 0.16411316
+        GroundColor: {r: 0.000607054, g: 0.06480328, b: 0, a: 1}
+      - Position: {x: 3.3150785, y: 3.3622847, z: 12.361597}
+        Light: 0.56990916
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 3.4926832, y: 3.5010135, z: 12.085141}
+        Light: 0.57528174
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 2.6004949, y: 2.6975307, z: 12.507553}
+        Light: 0.13481665
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 3.0725238, y: 3.2560565, z: 12.198695}
+        Light: 0.56271046
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 3.5801587, y: 3.466324, z: 12.305596}
+        Light: 0.66734666
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 3.8005733, y: 3.580415, z: 12.038448}
+        Light: 0.6415396
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 3.5281417, y: 3.4467165, z: 12.33316}
+        Light: 0.63979495
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 3.5426133, y: 3.4522302, z: 12.325266}
+        Light: 0.63979495
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 4.1214395, y: 3.5788686, z: 12.905125}
+        Light: 0.72114503
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 3.6655498, y: 3.5765426, z: 11.955417}
+        Light: 0.6134468
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 3.3805702, y: 3.4480517, z: 12.128769}
+        Light: 0.6249902
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 3.291269, y: 3.282621, z: 11.6573105}
+        Light: 0.5754893
+        GroundColor: {r: 0, g: 0.084376216, b: 0, a: 1}
+      - Position: {x: 3.0353837, y: 3.171306, z: 12.564332}
+        Light: 0.47673145
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 4.0534153, y: 3.6174614, z: 12.016846}
+        Light: 0.6066348
+        GroundColor: {r: 0, g: 0.09084173, b: 0, a: 1}
+      - Position: {x: 2.9027152, y: 2.8009572, z: 13.094349}
+        Light: 0.17812341
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 3.6080532, y: 3.5483816, z: 12.014853}
+        Light: 0.6017017
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 2.6728396, y: 2.8186402, z: 11.810144}
+        Light: 0.4025896
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 3.3790226, y: 3.4091368, z: 12.285991}
+        Light: 0.6017017
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 3.676095, y: 3.425911, z: 12.781755}
+        Light: 0.67522854
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 3.3154826, y: 3.1392264, z: 13.249247}
+        Light: 0.4404839
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 3.3763282, y: 3.3775592, z: 11.719479}
+        Light: 0.59711134
+        GroundColor: {r: 0.000607054, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 4.4398737, y: 3.6774573, z: 12.521138}
+        Light: 0.675
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 3.5655527, y: 3.4222648, z: 12.461745}
+        Light: 0.6544917
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 4.37707, y: 3.7777438, z: 11.853446}
+        Light: 0.49590015
+        GroundColor: {r: 0, g: 0.09989874, b: 0, a: 1}
+      - Position: {x: 3.201456, y: 3.2810268, z: 11.875928}
+        Light: 0.6065
+        GroundColor: {r: 0, g: 0.09084173, b: 0, a: 1}
+      - Position: {x: 4.207432, y: 3.579667, z: 12.443939}
+        Light: 0.64608103
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 3.1816103, y: 3.3355963, z: 12.213894}
+        Light: 0.57843506
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 3.826937, y: 3.6352541, z: 11.88591}
+        Light: 0.59593654
+        GroundColor: {r: 0, g: 0.09084173, b: 0, a: 1}
+      - Position: {x: 3.6130493, y: 3.5865414, z: 11.878031}
+        Light: 0.57528174
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 4.0212016, y: 3.7441087, z: 11.719797}
+        Light: 0.56640136
+        GroundColor: {r: 0, g: 0.086500466, b: 0, a: 1}
+      - Position: {x: 3.3072715, y: 3.1627934, z: 13.15556}
+        Light: 0.4404839
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 4.052704, y: 3.7863708, z: 11.650407}
+        Light: 0.54944384
+        GroundColor: {r: 0, g: 0.084376216, b: 0, a: 1}
+      - Position: {x: 3.572154, y: 3.3225996, z: 13.132629}
+        Light: 0.5050713
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 3.0174077, y: 3.1962264, z: 12.148904}
+        Light: 0.56271046
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 4.536273, y: 3.7398152, z: 12.074145}
+        Light: 0.49246216
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 3.4931154, y: 3.3197343, z: 12.9205885}
+        Light: 0.57131493
+        GroundColor: {r: 0, g: 0.05951124, b: 0, a: 1}
+      - Position: {x: 3.7842646, y: 3.4874237, z: 12.532244}
+        Light: 0.7091069
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 4.80295, y: 4.0479255, z: 11.734779}
+        Light: 0.6961055
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 3.1510441, y: 3.1947515, z: 11.750324}
+        Light: 0.56548244
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 3.740248, y: 3.6789987, z: 11.728963}
+        Light: 0.6042837
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 4.229724, y: 3.8397076, z: 11.652008}
+        Light: 0.56989795
+        GroundColor: {r: 0, g: 0.086500466, b: 0, a: 1}
+      - Position: {x: 3.7305527, y: 3.4785607, z: 12.477026}
+        Light: 0.70272464
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 4.00181, y: 3.5426967, z: 12.296777}
+        Light: 0.66537404
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 4.0833817, y: 3.5576763, z: 12.274957}
+        Light: 0.64608103
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 3.5356421, y: 3.461437, z: 12.283404}
+        Light: 0.6017017
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 3.6223364, y: 3.4854515, z: 12.270818}
+        Light: 0.63702196
+        GroundColor: {r: 0, g: 0.084376216, b: 0, a: 1}
+      - Position: {x: 4.168233, y: 3.6010287, z: 13.128681}
+        Light: 0.6499565
+        GroundColor: {r: 0, g: 0.084376216, b: 0, a: 1}
+      - Position: {x: 4.345819, y: 3.6116455, z: 12.343952}
+        Light: 0.6273091
+        GroundColor: {r: 0, g: 0.06301003, b: 0, a: 1}
+      - Position: {x: 3.9626923, y: 3.5366173, z: 12.291737}
+        Light: 0.66537404
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 3.7941518, y: 3.4534278, z: 12.915814}
+        Light: 0.6677588
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 4.399463, y: 3.725426, z: 11.959194}
+        Light: 0.49590015
+        GroundColor: {r: 0, g: 0.09989874, b: 0, a: 1}
+      - Position: {x: 3.88232, y: 3.576996, z: 12.082126}
+        Light: 0.6305557
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 3.9502892, y: 3.575273, z: 12.114167}
+        Light: 0.6305557
+        GroundColor: {r: 0, g: 0.086500466, b: 0, a: 1}
+      - Position: {x: 4.122997, y: 3.5863678, z: 12.1365185}
+        Light: 0.6176187
+        GroundColor: {r: 0, g: 0.09084173, b: 0, a: 1}
+      - Position: {x: 4.086505, y: 3.5533457, z: 12.34301}
+        Light: 0.64608103
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 3.965238, y: 3.5495749, z: 12.217859}
+        Light: 0.6415396
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 4.681399, y: 4.0442176, z: 11.60923}
+        Light: 0.6373823
+        GroundColor: {r: 0, g: 0.09084173, b: 0, a: 1}
+      - Position: {x: 3.7295313, y: 3.5750906, z: 12.018231}
+        Light: 0.6134468
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 3.5530236, y: 3.5593715, z: 11.92242}
+        Light: 0.6017017
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 4.0940795, y: 3.570728, z: 13.093873}
+        Light: 0.6499565
+        GroundColor: {r: 0, g: 0.084376216, b: 0, a: 1}
+      - Position: {x: 4.490733, y: 3.6986735, z: 12.504562}
+        Light: 0.675
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 4.5910635, y: 3.7902155, z: 13.000659}
+        Light: 0.7342207
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 5.7292185, y: 4.015484, z: 12.385496}
+        Light: 0.66467625
+        GroundColor: {r: 0, g: 0.09084173, b: 0, a: 1}
+      - Position: {x: 5.7637787, y: 4.070099, z: 12.265962}
+        Light: 0.6868569
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 5.6337404, y: 4.034816, z: 11.6068735}
+        Light: 0.83440626
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 4.6793814, y: 4.1168094, z: 11.430097}
+        Light: 0.909314
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 5.5602055, y: 4.0086856, z: 10.8155775}
+        Light: 0.7988462
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 5.3214636, y: 3.963071, z: 11.432989}
+        Light: 0.82951903
+        GroundColor: {r: 0, g: 0.084376216, b: 0, a: 1}
+      - Position: {x: 4.6711893, y: 4.0062003, z: 11.680792}
+        Light: 0.6191216
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 5.902313, y: 4.035918, z: 11.0874}
+        Light: 0.78222704
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 5.05327, y: 4.1249843, z: 11.985846}
+        Light: 0.6807852
+        GroundColor: {r: 0, g: 0.06301003, b: 0, a: 1}
+      - Position: {x: 5.3600945, y: 4.0232954, z: 10.766169}
+        Light: 0.85502195
+        GroundColor: {r: 0, g: 0.09084173, b: 0, a: 1}
+      - Position: {x: 5.300177, y: 4.0383263, z: 11.657288}
+        Light: 0.85411376
+        GroundColor: {r: 0, g: 0.09989874, b: 0, a: 1}
+      - Position: {x: 5.420455, y: 4.0908303, z: 11.805641}
+        Light: 0.7956353
+        GroundColor: {r: 0, g: 0.09084173, b: 0, a: 1}
+      - Position: {x: 5.019497, y: 4.1062193, z: 11.760348}
+        Light: 0.79158103
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 5.416788, y: 3.9958045, z: 10.921853}
+        Light: 0.80482227
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 4.888925, y: 4.046467, z: 11.248242}
+        Light: 0.8503042
+        GroundColor: {r: 0, g: 0.084376216, b: 0, a: 1}
+      - Position: {x: 4.6301646, y: 4.0194387, z: 11.607072}
+        Light: 0.6373823
+        GroundColor: {r: 0, g: 0.09989874, b: 0, a: 1}
+      - Position: {x: 5.575145, y: 4.1362333, z: 12.087533}
+        Light: 0.6501299
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 4.3816643, y: 3.9746273, z: 11.481147}
+        Light: 0.6773711
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 4.8130255, y: 3.975479, z: 11.926754}
+        Light: 0.6121387
+        GroundColor: {r: 0, g: 0.09084173, b: 0, a: 1}
+      - Position: {x: 5.8011484, y: 4.0298853, z: 11.408602}
+        Light: 0.82990235
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 5.423492, y: 3.8915646, z: 12.54849}
+        Light: 0.6348828
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 5.470242, y: 3.9988809, z: 10.90297}
+        Light: 0.7988462
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 5.4088516, y: 4.0319157, z: 11.656937}
+        Light: 0.7699004
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 4.847142, y: 3.9685385, z: 12.034649}
+        Light: 0.5590039
+        GroundColor: {r: 0, g: 0.09084173, b: 0, a: 1}
+      - Position: {x: 5.582878, y: 3.9787774, z: 11.054134}
+        Light: 0.7525205
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 5.500841, y: 4.0337048, z: 12.25645}
+        Light: 0.66498196
+        GroundColor: {r: 0, g: 0.09084173, b: 0, a: 1}
+      - Position: {x: 4.729656, y: 3.9959767, z: 11.756459}
+        Light: 0.6191216
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 5.6748877, y: 3.980984, z: 11.186354}
+        Light: 0.79142773
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 5.313596, y: 4.037449, z: 12.243495}
+        Light: 0.67307717
+        GroundColor: {r: 0, g: 0.086500466, b: 0, a: 1}
+      - Position: {x: 5.6071286, y: 3.969312, z: 11.34665}
+        Light: 0.82070166
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 6.1200747, y: 4.0802073, z: 10.864661}
+        Light: 0.8254419
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 6.1216354, y: 4.114002, z: 11.390179}
+        Light: 0.8345479
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 5.9536448, y: 4.0493336, z: 11.035014}
+        Light: 0.7990986
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 6.1993303, y: 4.091149, z: 10.381853}
+        Light: 0.9346372
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 5.8761497, y: 3.8885815, z: 9.906943}
+        Light: 0.9804492
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 6.9384513, y: 3.7884138, z: 10.49729}
+        Light: 0.39209765
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 6.2664027, y: 4.020621, z: 10.276681}
+        Light: 0.92508984
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 6.104951, y: 4.084658, z: 11.1566725}
+        Light: 0.8296304
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 6.4680586, y: 3.4469879, z: 9.771133}
+        Light: 0.52266747
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 6.3339024, y: 3.8514483, z: 10.117954}
+        Light: 0.8160386
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 6.4038224, y: 4.0735044, z: 10.45315}
+        Light: 1.0121709
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 6.465905, y: 4.125961, z: 10.89839}
+        Light: 0.8550117
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 6.3313704, y: 4.0973096, z: 10.579052}
+        Light: 0.9988008
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 6.204099, y: 4.10264, z: 11.045014}
+        Light: 0.8345479
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 6.1978416, y: 4.093765, z: 10.708365}
+        Light: 0.86207813
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 6.255955, y: 4.0938706, z: 10.477289}
+        Light: 0.9163413
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 6.094652, y: 4.085264, z: 10.510356}
+        Light: 1.0324229
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 6.523685, y: 3.4056523, z: 9.778106}
+        Light: 0.52266747
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 6.4155483, y: 4.1452737, z: 11.271639}
+        Light: 0.8496426
+        GroundColor: {r: 0, g: 0.05951124, b: 0, a: 1}
+      - Position: {x: 6.3758817, y: 3.75327, z: 10.029614}
+        Light: 0.706645
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 5.950685, y: 3.8226721, z: 9.779081}
+        Light: 0.9081973
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 5.5619583, y: 3.9920866, z: 10.373305}
+        Light: 0.87132424
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 5.5982695, y: 3.856996, z: 10.053175}
+        Light: 0.94656396
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 6.145109, y: 4.0905943, z: 10.363941}
+        Light: 0.8937676
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 6.4035053, y: 4.1517115, z: 11.362766}
+        Light: 0.8496426
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 5.852351, y: 4.0230317, z: 11.127167}
+        Light: 0.78222704
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 6.4607964, y: 4.0946226, z: 10.526127}
+        Light: 0.9623667
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 6.037348, y: 4.0745306, z: 11.283328}
+        Light: 0.8345479
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 6.125245, y: 4.089048, z: 10.309267}
+        Light: 0.8937676
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 5.720616, y: 3.8502982, z: 9.936869}
+        Light: 0.9804492
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 6.2828116, y: 4.1058517, z: 10.809044}
+        Light: 0.8345366
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 5.9375324, y: 3.9595654, z: 10.033812}
+        Light: 0.9804492
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 6.873354, y: 3.410564, z: 10.064737}
+        Light: 0.21494812
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 6.73355, y: 4.0313845, z: 10.647832}
+        Light: 0.8354902
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 6.7383842, y: 4.1541047, z: 11.0346155}
+        Light: 0.87919384
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 6.9773083, y: 3.0429828, z: 9.838343}
+        Light: 0.005305729
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 6.9679294, y: 2.6909971, z: 9.5589695}
+        Light: 0.0073621753
+        GroundColor: {r: 0, g: 0.05951124, b: 0, a: 1}
+      - Position: {x: 7.136038, y: 3.6628067, z: 10.50656}
+        Light: 0.35217384
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 6.750633, y: 3.6449184, z: 10.2029085}
+        Light: 0.4445188
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 6.8848486, y: 3.4494936, z: 10.10655}
+        Light: 0.21494812
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 6.1852875, y: 4.08728, z: 10.321934}
+        Light: 0.58326906
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 6.1956778, y: 4.090746, z: 10.367537}
+        Light: 0.9346372
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 7.2625737, y: 3.9672325, z: 11.009378}
+        Light: 0.41072974
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 6.874008, y: 3.2184947, z: 9.900663}
+        Light: 0.04643146
+        GroundColor: {r: 0, g: 0.05951124, b: 0, a: 1}
+      - Position: {x: 6.896702, y: 3.5499127, z: 10.214128}
+        Light: 0.3047085
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 6.901519, y: 3.8183887, z: 10.505386}
+        Light: 0.39209765
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 6.1963205, y: 4.0912323, z: 10.785188}
+        Light: 0.86207813
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 6.975577, y: 3.4712062, z: 10.191966}
+        Light: 0.14510389
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 6.448676, y: 3.8417394, z: 10.192894}
+        Light: 0.76922464
+        GroundColor: {r: 0, g: 0.084376216, b: 0, a: 1}
+      - Position: {x: 6.7335386, y: 3.7908778, z: 10.347225}
+        Light: 0.5038994
+        GroundColor: {r: 0, g: 0.084376216, b: 0, a: 1}
+      - Position: {x: 7.014244, y: 3.618758, z: 10.372066}
+        Light: 0.35217384
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 6.4680586, y: 3.9951944, z: 10.395677}
+        Light: 0.833979
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 6.787782, y: 3.0734065, z: 9.69671}
+        Light: 0.09852002
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 7.0039887, y: 2.8069685, z: 9.682817}
+        Light: 0.0055333176
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 6.514627, y: 3.848656, z: 10.25057}
+        Light: 0.74504346
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 6.748604, y: 3.8617263, z: 10.441781}
+        Light: 0.6263867
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 6.9598546, y: 2.775685, z: 9.617197}
+        Light: 0.01427462
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 6.750778, y: 2.873366, z: 9.502805}
+        Light: 0.14509949
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 6.8809175, y: 3.1931694, z: 9.884052}
+        Light: 0.013388008
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 5.3657274, y: 2.687645, z: 8.482118}
+        Light: 0.89408153
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 4.7994833, y: 3.195429, z: 9.031786}
+        Light: 0.8399092
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 5.0383844, y: 3.1473353, z: 8.86269}
+        Light: 0.9318999
+        GroundColor: {r: 0, g: 0.084376216, b: 0, a: 1}
+      - Position: {x: 4.9653816, y: 2.330541, z: 8.319624}
+        Light: 0.65843165
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 4.726257, y: 2.9320405, z: 8.770918}
+        Light: 0.7440733
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 4.9191146, y: 2.749341, z: 8.549101}
+        Light: 0.7459751
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 4.293558, y: 2.0466962, z: 8.700206}
+        Light: 0.43779054
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 5.0263352, y: 2.7344832, z: 8.472598}
+        Light: 0.81278175
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 5.3093357, y: 2.6811466, z: 8.460379}
+        Light: 0.89408153
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 5.885748, y: 2.8141716, z: 8.80081}
+        Light: 0.78416115
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 4.9924574, y: 2.5083253, z: 8.38224}
+        Light: 0.69947267
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 4.8602753, y: 3.317391, z: 9.223898}
+        Light: 0.908606
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 5.8566575, y: 3.0528305, z: 8.955071}
+        Light: 0.78675145
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 5.0316668, y: 2.6612432, z: 8.431488}
+        Light: 0.81278175
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 4.09623, y: 1.6547782, z: 8.689261}
+        Light: 0.37699074
+        GroundColor: {r: 0, g: 0.06124607, b: 0, a: 1}
+      - Position: {x: 4.6917095, y: 2.2732823, z: 8.479391}
+        Light: 0.55974656
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 4.3683896, y: 2.262865, z: 8.735477}
+        Light: 0.4741494
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 4.3550787, y: 3.093581, z: 9.165247}
+        Light: 0.7436392
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 4.9885154, y: 3.0163047, z: 8.693573}
+        Light: 0.86635256
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 4.592987, y: 2.7860916, z: 8.791367}
+        Light: 0.66845214
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 5.642442, y: 3.022095, z: 8.805181}
+        Light: 0.8767544
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 4.448061, y: 1.8280005, z: 8.481543}
+        Light: 0.43779054
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 5.1390944, y: 3.15777, z: 8.844734}
+        Light: 0.9318999
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 5.1342077, y: 3.1114352, z: 8.780517}
+        Light: 0.9398091
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 5.008358, y: 2.9452705, z: 8.62536}
+        Light: 0.88388866
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 5.300479, y: 3.1530607, z: 8.785524}
+        Light: 1.0540683
+        GroundColor: {r: 0, g: 0.06124607, b: 0, a: 1}
+      - Position: {x: 5.017366, y: 3.013479, z: 8.680193}
+        Light: 0.92261523
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 5.802024, y: 3.1184282, z: 8.974176}
+        Light: 0.8265625
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 5.4246507, y: 2.4956748, z: 8.407097}
+        Light: 0.8686563
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 4.9735894, y: 3.0211382, z: 8.7052355}
+        Light: 0.86635256
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 4.9764013, y: 2.3414962, z: 8.317427}
+        Light: 0.65843165
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 4.6205525, y: 1.9952075, z: 8.4202}
+        Light: 0.50259155
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 5.1690264, y: 3.109925, z: 8.76704}
+        Light: 0.9398091
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 4.310478, y: 2.2433531, z: 8.776272}
+        Light: 0.4741494
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 5.1012483, y: 2.5658872, z: 8.340186}
+        Light: 0.87461525
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 5.050443, y: 3.1413476, z: 8.850262}
+        Light: 0.9318999
+        GroundColor: {r: 0, g: 0.084376216, b: 0, a: 1}
+      - Position: {x: 5.2474318, y: 2.958146, z: 8.599997}
+        Light: 0.9889243
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 5.2294416, y: 3.082836, z: 8.708905}
+        Light: 1.0387803
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 6.6792855, y: 2.8946455, z: 9.454002}
+        Light: 0.269209
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 6.366336, y: 3.7032616, z: 9.965624}
+        Light: 0.72743946
+        GroundColor: {r: 0, g: 0.09084173, b: 0, a: 1}
+      - Position: {x: 6.128221, y: 3.2278392, z: 9.286931}
+        Light: 0.63587207
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 7.53167, y: 3.8245056, z: 11.27048}
+        Light: 0.3108174
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 6.7262325, y: 2.8338318, z: 9.449865}
+        Light: 0.18968262
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 7.625133, y: 3.4319894, z: 11.969023}
+        Light: 0.11522876
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 6.180068, y: 3.8487303, z: 9.994745}
+        Light: 0.8574815
+        GroundColor: {r: 0, g: 0.09305898, b: 0, a: 1}
+      - Position: {x: 7.1606884, y: 3.8885455, z: 10.78279}
+        Light: 0.39209765
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 6.6935215, y: 4.1540856, z: 11.054139}
+        Light: 0.87919384
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 6.289546, y: 4.1369643, z: 11.319858}
+        Light: 0.8496426
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 6.056278, y: 2.356999, z: 8.618929}
+        Light: 0.572146
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 3.8165693, y: 2.8723974, z: 9.416899}
+        Light: 0.6429546
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 6.551111, y: 2.9085324, z: 9.348866}
+        Light: 0.37063256
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 7.052483, y: 3.9537995, z: 10.785062}
+        Light: 0.59673685
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 5.7454095, y: 2.3547993, z: 8.452183}
+        Light: 0.802061
+        GroundColor: {r: 0.000607054, g: 0.07227186, b: 0, a: 1}
+      - Position: {x: 4.807731, y: 3.1295407, z: 8.915615}
+        Light: 0.8225127
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 4.0368176, y: 3.061005, z: 9.402636}
+        Light: 0.7803984
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 6.6086874, y: 3.934086, z: 10.421217}
+        Light: 0.7944922
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 5.591609, y: 3.9658468, z: 11.203715}
+        Light: 0.78222704
+        GroundColor: {r: 0, g: 0.06301003, b: 0, a: 1}
+      - Position: {x: 6.1987505, y: 3.0872896, z: 9.217868}
+        Light: 0.5693091
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 5.4341555, y: 3.5578098, z: 9.44595}
+        Light: 0.9510454
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 5.2737083, y: 2.895237, z: 8.569986}
+        Light: 0.9473384
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 6.9534917, y: 3.5877297, z: 10.295465}
+        Light: 0.3047085
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 6.870792, y: 2.6346412, z: 9.4284}
+        Light: 0.010631729
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 4.8918633, y: 3.0831664, z: 8.819239}
+        Light: 0.86635256
+        GroundColor: {r: 0, g: 0.06301003, b: 0, a: 1}
+      - Position: {x: 5.014004, y: 3.555558, z: 9.750475}
+        Light: 1.0019962
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 3.7866652, y: 3.0495083, z: 9.626957}
+        Light: 0.79644775
+        GroundColor: {r: 0, g: 0.084376216, b: 0, a: 1}
+      - Position: {x: 4.5000386, y: 3.0856996, z: 9.031357}
+        Light: 0.77129006
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 6.662883, y: 3.8558462, z: 10.370452}
+        Light: 0.70550096
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 4.8566256, y: 2.6212883, z: 8.526614}
+        Light: 0.72523826
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 7.4560976, y: 3.5013733, z: 12.578291}
+        Light: 0.5308335
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 4.8267436, y: 3.5655012, z: 9.876763}
+        Light: 0.9936367
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 6.0285983, y: 3.4056027, z: 9.373522}
+        Light: 0.7529292
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 6.395052, y: 4.010806, z: 10.3612995}
+        Light: 1.0121709
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 5.561532, y: 3.2931595, z: 8.976575}
+        Light: 0.99144095
+        GroundColor: {r: 0.000607054, g: 0.07227186, b: 0, a: 1}
+      - Position: {x: 6.0025234, y: 2.6948307, z: 8.789552}
+        Light: 0.66698045
+        GroundColor: {r: 0, g: 0.06124607, b: 0, a: 1}
+      - Position: {x: 5.553959, y: 4.115958, z: 12.119139}
+        Light: 0.7218794
+        GroundColor: {r: 0, g: 0.084376216, b: 0, a: 1}
+      - Position: {x: 5.8244843, y: 3.9491236, z: 12.646368}
+        Light: 0.68179345
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 6.836446, y: 3.2256243, z: 9.879124}
+        Light: 0.14509949
+        GroundColor: {r: 0, g: 0.06124607, b: 0, a: 1}
+      - Position: {x: 6.5961485, y: 4.123904, z: 10.822512}
+        Light: 0.89109427
+        GroundColor: {r: 0, g: 0.06301003, b: 0, a: 1}
+      - Position: {x: 6.696727, y: 3.3914335, z: 9.9105215}
+        Light: 0.27924073
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 6.9686956, y: 3.6428573, z: 12.876266}
+        Light: 0.6864883
+        GroundColor: {r: 0, g: 0.06301003, b: 0, a: 1}
+      - Position: {x: 7.5206575, y: 3.452505, z: 12.510875}
+        Light: 0.43120557
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 6.7247095, y: 2.7968414, z: 9.420294}
+        Light: 0.18968262
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 6.3085713, y: 3.5572312, z: 9.7613735}
+        Light: 0.6412075
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 4.402551, y: 3.105086, z: 9.144629}
+        Light: 0.79780126
+        GroundColor: {r: 0, g: 0.06124607, b: 0, a: 1}
+      - Position: {x: 5.2757816, y: 4.04644, z: 11.674469}
+        Light: 0.85411376
+        GroundColor: {r: 0, g: 0.09989874, b: 0, a: 1}
+      - Position: {x: 6.8574557, y: 3.9664333, z: 12.210724}
+        Light: 0.6624805
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 4.431088, y: 3.9987817, z: 11.311028}
+        Light: 0.82785743
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 5.9647274, y: 4.0511003, z: 11.097613}
+        Light: 0.7990986
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 4.9160724, y: 3.8885596, z: 10.694413}
+        Light: 0.81475294
+        GroundColor: {r: 0, g: 0.084376216, b: 0, a: 1}
+      - Position: {x: 3.5018816, y: 3.0371075, z: 9.87022}
+        Light: 0.7214927
+        GroundColor: {r: 0, g: 0.09084173, b: 0, a: 1}
+      - Position: {x: 5.0837717, y: 4.137946, z: 11.877482}
+        Light: 0.7468096
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 5.0500975, y: 4.1196284, z: 11.817004}
+        Light: 0.7468096
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 3.242341, y: 1.7213304, z: 9.282424}
+        Light: 0.1723208
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 3.7512856, y: 1.1466849, z: 8.717873}
+        Light: 0.08176062
+        GroundColor: {r: 0.05448028, g: 0.052860655, b: 0.05448028, a: 1}
+      - Position: {x: 4.9827843, y: 2.2653823, z: 8.280056}
+        Light: 0.63321877
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 4.918867, y: 2.6447396, z: 8.497374}
+        Light: 0.7459751
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 6.5094576, y: 2.3764389, z: 8.927578}
+        Light: 0.25789684
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 5.4565887, y: 2.906059, z: 8.651524}
+        Light: 0.89105517
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 4.269479, y: 1.3048475, z: 8.419531}
+        Light: 0.31844777
+        GroundColor: {r: 0.07227186, g: 0.07618539, b: 0.07227186, a: 1}
+      - Position: {x: 5.8162856, y: 2.636179, z: 8.648847}
+        Light: 0.76668656
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 4.437853, y: 1.8922768, z: 8.514646}
+        Light: 0.43779054
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 4.665859, y: 1.8676848, z: 8.335962}
+        Light: 0.49343288
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 4.5003495, y: 2.648562, z: 8.789843}
+        Light: 0.5996514
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 6.054403, y: 2.476285, z: 8.686838}
+        Light: 0.6687925
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 4.425755, y: 1.6409364, z: 8.423731}
+        Light: 0.40882397
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 3.7042606, y: 2.9411786, z: 9.519446}
+        Light: 0.71477735
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 5.822486, y: 2.399968, z: 8.513554}
+        Light: 0.76668656
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 6.6478214, y: 2.8315837, z: 9.377432}
+        Light: 0.25663233
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 3.465039, y: 1.528857, z: 9.060584}
+        Light: 0.19042249
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 4.5999684, y: 2.1723425, z: 8.50584}
+        Light: 0.5327168
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 3.7502353, y: 1.5544639, z: 8.894139}
+        Light: 0.27105567
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 6.7563643, y: 2.7116623, z: 9.383911}
+        Light: 0.09866058
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 2.7876785, y: 2.0989788, z: 10.19403}
+        Light: 0.12069019
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 5.219627, y: 2.5789607, z: 8.380402}
+        Light: 0.849146
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 5.335409, y: 2.5504448, z: 8.404346}
+        Light: 0.849146
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 5.613732, y: 2.4905372, z: 8.466686}
+        Light: 0.8686563
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 3.07153, y: 2.9039276, z: 10.346753}
+        Light: 0.24985914
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 3.0243182, y: 2.5794888, z: 9.990968}
+        Light: 0.18100634
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 6.4478436, y: 2.3168976, z: 8.840064}
+        Light: 0.31787476
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 3.0968633, y: 2.78768, z: 10.048706}
+        Light: 0.3435115
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 5.6447797, y: 2.939774, z: 8.750586}
+        Light: 0.9053003
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 5.7456646, y: 2.4908497, z: 8.520444}
+        Light: 0.802061
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 5.2132673, y: 2.9211283, z: 8.573999}
+        Light: 0.95734525
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 3.8245492, y: 2.5238795, z: 9.282662}
+        Light: 0.5414898
+        GroundColor: {r: 0, g: 0.09084173, b: 0, a: 1}
+      - Position: {x: 3.858169, y: 1.803592, z: 8.942051}
+        Light: 0.35525513
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 6.9761453, y: 2.5303898, z: 9.443947}
+        Light: 0.0040189438
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 4.6850185, y: 2.094822, z: 8.412266}
+        Light: 0.5387583
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 5.0893188, y: 2.5184755, z: 8.324096}
+        Light: 0.83351856
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 3.9202573, y: 1.4249403, z: 8.711222}
+        Light: 0.29281786
+        GroundColor: {r: 0.001517635, g: 0.06662595, b: 0.001517635, a: 1}
+      - Position: {x: 6.3517923, y: 2.230795, z: 8.727677}
+        Light: 0.38088697
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 6.5771422, y: 2.9437191, z: 9.399199}
+        Light: 0.32031348
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 3.8327243, y: 1.8339233, z: 8.974993}
+        Light: 0.3634551
+        GroundColor: {r: 0.014443844, g: 0.07421358, b: 0.014443844, a: 1}
+      - Position: {x: 4.660922, y: 1.7827435, z: 8.305864}
+        Light: 0.5149917
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 3.338739, y: 2.811279, z: 9.677347}
+        Light: 0.5392583
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 3.0604997, y: 2.6983795, z: 10.043761}
+        Light: 0.28872216
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 4.031294, y: 1.6494062, z: 8.739601}
+        Light: 0.35945314
+        GroundColor: {r: 0, g: 0.05951124, b: 0, a: 1}
+      - Position: {x: 2.580716, y: 2.4339721, z: 11.298187}
+        Light: 0.16472644
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 5.4029818, y: 2.3909917, z: 8.349363}
+        Light: 0.849146
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 4.0941687, y: 2.5493832, z: 9.09056}
+        Light: 0.5437305
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 4.5837092, y: 1.8985336, z: 8.409079}
+        Light: 0.4841079
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 5.3791394, y: 2.4240515, z: 8.357523}
+        Light: 0.849146
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 2.8346524, y: 2.0504215, z: 9.8578615}
+        Light: 0.12566516
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 5.3024597, y: 2.883782, z: 8.574289}
+        Light: 0.9473384
+        GroundColor: {r: 0, g: 0.082282715, b: 0, a: 1}
+      - Position: {x: 7.130163, y: 2.3331485, z: 9.44043}
+        Light: 0.0025549603
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 3.9608648, y: 1.3683093, z: 8.655607}
+        Light: 0.25845996
+        GroundColor: {r: 0.005181517, g: 0.06847818, b: 0.005181517, a: 1}
+      - Position: {x: 4.03969, y: 2.1014884, z: 8.943694}
+        Light: 0.41241968
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 5.8470426, y: 2.9129975, z: 8.846076}
+        Light: 0.81635594
+        GroundColor: {r: 0, g: 0.07618539, b: 0, a: 1}
+      - Position: {x: 5.474492, y: 2.7364686, z: 8.551697}
+        Light: 0.8775835
+        GroundColor: {r: 0, g: 0.05951124, b: 0, a: 1}
+      - Position: {x: 4.9755387, y: 2.243927, z: 8.276327}
+        Light: 0.63321877
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 3.6121933, y: 2.1277275, z: 9.262911}
+        Light: 0.3842014
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 6.3214636, y: 2.4421349, z: 8.828794}
+        Light: 0.41669142
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 6.059101, y: 2.416734, z: 8.6550665}
+        Light: 0.617875
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 4.0904307, y: 1.6528797, z: 8.693372}
+        Light: 0.37699074
+        GroundColor: {r: 0, g: 0.06124607, b: 0, a: 1}
+      - Position: {x: 5.901751, y: 2.7088096, z: 8.742548}
+        Light: 0.73539895
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 5.8372483, y: 2.547025, z: 8.604781}
+        Light: 0.73539895
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 5.2567406, y: 2.3900805, z: 8.300914}
+        Light: 0.8408452
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 3.3298464, y: 1.6506865, z: 9.191028}
+        Light: 0.16214088
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 5.3208575, y: 2.588312, z: 8.418282}
+        Light: 0.849146
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 4.199659, y: 1.0726533, z: 8.396063}
+        Light: 0.1762334
+        GroundColor: {r: 0.057805434, g: 0.056128494, b: 0.057805434, a: 1}
+      - Position: {x: 3.8585305, y: 1.838269, z: 8.958756}
+        Light: 0.3634551
+        GroundColor: {r: 0, g: 0.07421358, b: 0, a: 1}
+      - Position: {x: 5.859355, y: 2.2824447, z: 8.473473}
+        Light: 0.73035353
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 6.128394, y: 2.9400156, z: 9.043434}
+        Light: 0.65846825
+        GroundColor: {r: 0, g: 0.06124607, b: 0, a: 1}
+      - Position: {x: 4.5568485, y: 2.4401112, z: 8.654641}
+        Light: 0.53436184
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 3.3874838, y: 2.629999, z: 9.570757}
+        Light: 0.482615
+        GroundColor: {r: 0, g: 0.07818743, b: 0, a: 1}
+      - Position: {x: 3.7592819, y: 1.2323468, z: 8.742966}
+        Light: 0.15634423
+        GroundColor: {r: 0.027320892, g: 0.06847818, b: 0.027320892, a: 1}
+      - Position: {x: 4.4398017, y: 1.9910035, z: 8.552434}
+        Light: 0.44731203
+        GroundColor: {r: 0, g: 0.07036011, b: 0, a: 1}
+      - Position: {x: 3.8446226, y: 1.9478014, z: 9.022232}
+        Light: 0.3798523
+        GroundColor: {r: 0, g: 0.06847818, b: 0, a: 1}
+      - Position: {x: 4.0913143, y: 2.41782, z: 9.038954}
+        Light: 0.5046008
+        GroundColor: {r: 0, g: 0.06662595, b: 0, a: 1}
+      - Position: {x: 3.7895513, y: 2.0518153, z: 9.112299}
+        Light: 0.39834863
+        GroundColor: {r: 0, g: 0.05951124, b: 0, a: 1}
+      ObjectBounds:
+        m_Center: {x: 5.326952, y: 1.1648597, z: 11.590727}
+        m_Extent: {x: 4.343964, y: 0.5, z: 4.319321}
+  ObjectBounds:
+    m_Center: {x: 5.326952, y: 1.1648597, z: 11.590727}
+    m_Extent: {x: 4.343964, y: 3.089809, z: 4.319321}
+  ChunkSize: {x: 100, y: 100}
