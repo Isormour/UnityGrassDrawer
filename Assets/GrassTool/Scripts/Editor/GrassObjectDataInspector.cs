@@ -23,5 +23,6 @@ public class GrassObjectDataInspector : Editor
             }
             EditorGUILayout.LabelField("Grass blades " + blades);
         }
+
     }
 }

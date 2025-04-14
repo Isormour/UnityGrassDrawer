@@ -40,7 +40,28 @@ public class GrassObjectChunk
     public struct GrassBladeData
     {
         public Vector3 Position;
-        public float Light;
-        public Color GroundColor;
+        public float Light
+        {
+            get { return light / 255.0f; }
+            set { light = (byte)(value * 255); }
+        }
+
+
+        public Color GroundColor
+        {
+            get { return new Color(r / 255.0f, g / 255.0f, b / 255.0f); }
+            set
+            {
+                r = (byte)(value.r * 255);
+                g = (byte)(value.g * 255);
+                b = (byte)(value.b * 255);
+            }
+        }
+        public byte light;
+        public byte r;
+        public byte g;
+        public byte b;
+
+
     }
 }

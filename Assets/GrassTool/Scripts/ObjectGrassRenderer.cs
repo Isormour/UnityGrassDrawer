@@ -75,7 +75,7 @@ public class ObjectGrassRenderer
 
         renderParams.worldBounds = data.ObjectBounds;
         renderParams.matProps = new MaterialPropertyBlock();
-
+        Vector3 center = data.ObjectBounds.center;
         for (int i = 0; i < instances; i++)
         {
             instanceParams[i] = new BasicInstancedParams();
