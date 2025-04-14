@@ -1,18 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85c6364eb75fedf4fb36a18d59f52fb0, type: 3}
-  m_Name: SampleScene_Grass_23076
-  m_EditorClassIdentifier: 
-  GrassBlades: []
-  ObjectBounds:
-    m_Center: {x: 10.377106, y: 3.2075167, z: 9.57066}
-    m_Extent: {x: 3.506583, y: 1.9767088, z: 3.5433412}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b625c47ad475b4d5e10fb1653b59d6442792d2b7aa9337a9e17446844df749e0
+size 575
