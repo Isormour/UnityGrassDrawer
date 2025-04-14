@@ -1581,7 +1581,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dc455f2c8910ca4caea611e94356629, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grassObjectData: []
+  grassObjectData:
+  - {fileID: 11400000, guid: d5d6558e0abebe94c9f02385f320af7c, type: 2}
   grassMat: {fileID: 2100000, guid: f2f3bb346e7cef64e94495e746097455, type: 2}
   grassMesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
   drawGizmos: 0
