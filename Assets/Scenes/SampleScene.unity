@@ -644,7 +644,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &705507994
 Light:
   m_ObjectHideFlags: 0
@@ -652,7 +652,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
@@ -1269,63 +1269,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 30.36, y: -2.336, z: 0.049}
---- !u!1001 &983336406
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 3223f7f4a308b784a8ce16a4c1e0d388, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.2207837
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 3223f7f4a308b784a8ce16a4c1e0d388, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 3223f7f4a308b784a8ce16a4c1e0d388, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 30.295568
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 3223f7f4a308b784a8ce16a4c1e0d388, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071067
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 3223f7f4a308b784a8ce16a4c1e0d388, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 3223f7f4a308b784a8ce16a4c1e0d388, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 3223f7f4a308b784a8ce16a4c1e0d388, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 3223f7f4a308b784a8ce16a4c1e0d388, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 3223f7f4a308b784a8ce16a4c1e0d388, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 3223f7f4a308b784a8ce16a4c1e0d388, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 3223f7f4a308b784a8ce16a4c1e0d388, type: 3}
-      propertyPath: m_Name
-      value: TallGrass (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3223f7f4a308b784a8ce16a4c1e0d388, type: 3}
 --- !u!1 &1092950150
 GameObject:
   m_ObjectHideFlags: 0
@@ -1548,7 +1491,7 @@ GameObject:
   - component: {fileID: 1247826579}
   - component: {fileID: 1247826580}
   m_Layer: 0
-  m_Name: GrassTransparent
+  m_Name: GrassTransparentBasic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1581,10 +1524,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dc455f2c8910ca4caea611e94356629, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grassObjectData:
-  - {fileID: 11400000, guid: d5d6558e0abebe94c9f02385f320af7c, type: 2}
   grassMat: {fileID: 2100000, guid: f2f3bb346e7cef64e94495e746097455, type: 2}
   grassMesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  grassType: {fileID: 11400000, guid: b162ca76578c6304b9d8f0788de14a75, type: 2}
+  grassObjects:
+  - gameObject: {fileID: 1960224215}
+    data: {fileID: 11400000, guid: 22ed8344529002042a59c7b53606f1cf, type: 2}
+  - gameObject: {fileID: 928747850}
+    data: {fileID: 11400000, guid: 5a0dd05979aa0c94e8be46093b77ef22, type: 2}
+  - gameObject: {fileID: 757000534}
+    data: {fileID: 11400000, guid: ab60d0071bf73f7459f7538f0ac7e02a, type: 2}
+  - gameObject: {fileID: 1386105226}
+    data: {fileID: 11400000, guid: df173b71037ad3c448f1c71ec100b972, type: 2}
+  - gameObject: {fileID: 1094137307}
+    data: {fileID: 11400000, guid: 69b9864dcf79ce7439132cdf0df24d17, type: 2}
+  - gameObject: {fileID: 932495260}
+    data: {fileID: 11400000, guid: bb590aa681bcf694d9f48852f2ec5398, type: 2}
+  - gameObject: {fileID: 392491344}
+    data: {fileID: 11400000, guid: b10c38d88d05e8d43b3bf38a9521241a, type: 2}
+  - gameObject: {fileID: 1533486088}
+    data: {fileID: 11400000, guid: 2417c490181701c4fb702487fe61bb77, type: 2}
   drawGizmos: 0
 --- !u!1 &1274026989
 GameObject:
@@ -1798,67 +1757,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -9118635377772757425, guid: 0179947ae81101e4dba55610d9395198, type: 3}
---- !u!1001 &1395503614
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 3223f7f4a308b784a8ce16a4c1e0d388, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.86
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 3223f7f4a308b784a8ce16a4c1e0d388, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.179
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 3223f7f4a308b784a8ce16a4c1e0d388, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 3223f7f4a308b784a8ce16a4c1e0d388, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 3223f7f4a308b784a8ce16a4c1e0d388, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 3223f7f4a308b784a8ce16a4c1e0d388, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 3223f7f4a308b784a8ce16a4c1e0d388, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 3223f7f4a308b784a8ce16a4c1e0d388, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 3223f7f4a308b784a8ce16a4c1e0d388, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 3223f7f4a308b784a8ce16a4c1e0d388, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: 3223f7f4a308b784a8ce16a4c1e0d388, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 86b0af61487284f4693696a98fa0bf78, type: 2}
-    - target: {fileID: 919132149155446097, guid: 3223f7f4a308b784a8ce16a4c1e0d388, type: 3}
-      propertyPath: m_Name
-      value: TallGrass
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3223f7f4a308b784a8ce16a4c1e0d388, type: 3}
 --- !u!21 &1511146812
 Material:
   serializedVersion: 8
@@ -2406,7 +2304,7 @@ GameObject:
   - component: {fileID: 1742321617}
   - component: {fileID: 1742321616}
   m_Layer: 0
-  m_Name: GrassTransparent (1)
+  m_Name: GrassTransparentTallGrass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2419,14 +2317,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1742321615}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1dc455f2c8910ca4caea611e94356629, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grassObjectData: []
   grassMat: {fileID: 2100000, guid: 86b0af61487284f4693696a98fa0bf78, type: 2}
   grassMesh: {fileID: -462981019419857548, guid: 3223f7f4a308b784a8ce16a4c1e0d388, type: 3}
+  grassType: {fileID: 11400000, guid: 77d2d225254a4a44ca5b6054bb843887, type: 2}
+  grassObjects: []
   drawGizmos: 0
 --- !u!4 &1742321617
 Transform:
@@ -2878,6 +2777,4 @@ SceneRoots:
   - {fileID: 1742321617}
   - {fileID: 853603419}
   - {fileID: 1671071162}
-  - {fileID: 1395503614}
-  - {fileID: 983336406}
   - {fileID: 1512815519}

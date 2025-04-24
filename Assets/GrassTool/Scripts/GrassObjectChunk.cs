@@ -12,7 +12,6 @@ public class GrassObjectChunk
     {
         GrassBlades = new GrassBladeData[0];
         ObjectBounds = bounds;
-        //
     }
 
     public static Vector3 ClampVector(Vector3 v, float min, float max)
@@ -27,13 +26,11 @@ public class GrassObjectChunk
     internal void AddGrassBlades(List<GrassBladeData> grassBladeDatas)
     {
         List<GrassBladeData> previousBlades = GrassBlades.ToList();
-        previousBlades.AddRange(grassBladeDatas);
-        GrassBlades = previousBlades.ToArray();
-
-        if (!ObjectBounds.Contains(grassBladeDatas[0].Position))
+        for (int i = 0; i < grassBladeDatas.Count; i++)
         {
-            Debug.LogError("To nie powinno mie� miejsca, nani dafuk");
+            previousBlades.Add(grassBladeDatas[i]);
         }
+        GrassBlades = previousBlades.ToArray();
     }
 
     [Serializable]

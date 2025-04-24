@@ -8,6 +8,8 @@ Shader "Custom/GrassIndirect"
         _WindFrequency ("Wind Frequency", Float) = 1.0
         _YCorrection("Y position correction",Float) = 0.0
         _AlphaRemap("Alpha Remap",Vector) = (0,1,0,1)
+        [Toggle(INTERACT_ON)] _INTERACT_ON ("Enable interaction", Float) = 0
+        [Toggle(USE_LIGHTNING)] _EnableLight ("Enable lightning", Float) = 0
     }
     SubShader
     {
@@ -25,10 +27,11 @@ Shader "Custom/GrassIndirect"
 
             #pragma vertex vert
             #pragma fragment frag
-
             #include "UnityCG.cginc"
             #define UNITY_INDIRECT_DRAW_ARGS IndirectDrawIndexedArgs
             #include "UnityIndirect.cginc"
+            #pragma multi_compile _ INTERACT_ON 
+            #pragma multi_compile _ USE_LIGHTNING 
 
             struct shaderParams
             {
@@ -61,7 +64,10 @@ Shader "Custom/GrassIndirect"
             float _WindFrequency;
             float _YCorrection;
             float4 _AlphaRemap;
-            float4 _InteractPosition;
+
+            #if _INTERACT_ON
+                float4 _InteractPosition;
+            #endif
 
             float4 Unity_Remap(float4 In, float2 InMinMax, float2 OutMinMax)
             {
@@ -75,16 +81,17 @@ Shader "Custom/GrassIndirect"
 
                 v2f o;
 
-                // Pobranie pozycji �wiata
+                // Pobranie pozycji swiata
                 float3 localPos = v.vertex.xyz;
                 float3 worldPos = _ParamsBuffer[ID].position;
 
                 
-                float distanceToInteract = distance(worldPos,_InteractPosition);
-                distanceToInteract = distanceToInteract/5;
-                distanceToInteract =  distanceToInteract*distanceToInteract*distanceToInteract;
-                localPos *= clamp(distanceToInteract,0.1,1);
-
+                #if _INTERACT_ON
+                    float distanceToInteract = distance(worldPos,_InteractPosition);
+                    distanceToInteract = distanceToInteract/5;
+                    distanceToInteract =  distanceToInteract*distanceToInteract*distanceToInteract;
+                    localPos *= clamp(distanceToInteract,0.1,1);
+                #endif
                 
 
                 float3 pos = worldPos.xyz + float3(0, _YCorrection, 0);
@@ -126,7 +133,10 @@ Shader "Custom/GrassIndirect"
                 
                 col.rgb = lerp(i.groundColor.rgb, _ColorTop.rgb, i.uv.y * i.uv.y * i.uv.y);
                 col.rgb *= textureColor;
-                col.rgb *= i.lightning;
+               
+                #if USE_LIGHTNING
+                    col.rgb *= i.lightning;
+                #endif
                 
                 col.a = Unity_Remap(i.uv.y * col.a, _AlphaRemap.xy, _AlphaRemap.zw).x;
                 col.a = clamp(col.a, 0, 1);

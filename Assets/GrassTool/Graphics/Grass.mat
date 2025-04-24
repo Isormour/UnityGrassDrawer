@@ -11,9 +11,11 @@ Material:
   m_Shader: {fileID: 4800000, guid: ceba07c67779c304cbaca719722906c1, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - USE_LIGHTNING
   m_InvalidKeywords:
   - _ALPHAPREMULTIPLY_ON
+  - _INTERACT_ON_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -73,9 +75,13 @@ Material:
     - _Cutoff: 0.332
     - _DetailNormalMapScale: 1
     - _DstBlend: 10
+    - _EnableLight: 1
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1
+    - _INTERACT: 1
+    - _INTERACT_ON: 0
+    - _Interact: 0
     - _Metallic: 1
     - _Mode: 3
     - _OcclusionStrength: 1
@@ -89,8 +95,8 @@ Material:
     - _YCorrection: 0.45
     - _ZWrite: 0
     m_Colors:
-    - _AlphaRemap: {r: 0, g: 0.12, b: 0, a: 1.73}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _AlphaRemap: {r: 0, g: 0, b: 0, a: 1.73}
+    - _Color: {r: 1, g: 1, b: 1, a: 0.3}
     - _ColorBottom: {r: 0, g: 0, b: 0, a: 1}
     - _ColorRemap: {r: 0, g: 1, b: 0, a: 1}
     - _ColorTop: {r: 0.008658171, g: 1, b: 0, a: 1}

@@ -11,9 +11,9 @@ public class GrassToolWindow : EditorWindow
     int tempHotControl = 0;
     static Mesh brushMesh;
     static Material brushMat;
-    string grassName;
     string fieldName;
     GrassTool tool;
+    GrassType grassType;
     [MenuItem("Tools/GrassDrawer")]
 
     public static void CreateWindow()
@@ -24,10 +24,9 @@ public class GrassToolWindow : EditorWindow
     void InitWindow()
     {
         LoadToolAssets();
-        if (!brushMat || !brushMesh)
+        if (!brushMat || !brushMesh || !grassType)
             return;
-        grassName = "";
-        tool = new GrassTool(brushMat, brushMesh, grassName);
+        tool = new GrassTool(brushMat, brushMesh, grassType);
     }
 
     private static void LoadToolAssets()
@@ -59,7 +58,7 @@ public class GrassToolWindow : EditorWindow
     }
     void DrawUI()
     {
-        if (!brushMesh || !brushMat || !GrassRendererExsist() || grassName == "")
+        if (!brushMesh || !brushMat || !GrassRendererExsist() || !grassType)
         {
             DrawInitPanel();
         }
@@ -98,20 +97,16 @@ public class GrassToolWindow : EditorWindow
             redLabelStyle.normal.textColor = Color.red;
             EditorGUILayout.LabelField("No grass renderer on scene", redLabelStyle);
         }
-        fieldName = EditorGUILayout.TextField("Brush material", fieldName);
-        if (grassName == "")
+        if (!grassType)
         {
             GUIStyle redLabelStyle = new GUIStyle(EditorStyles.label);
             redLabelStyle.normal.textColor = Color.red;
-            EditorGUILayout.LabelField("Set grass name", redLabelStyle);
+            EditorGUILayout.LabelField("Set grass type", redLabelStyle);
         }
-        if (GUILayout.Button("Set Name"))
-        {
-            grassName = fieldName;
-            this.tool.grassName = grassName;
-        }
-        if (brushMat != null && brushMesh != null && grassName != "")
-            this.tool = new GrassTool(brushMat, brushMesh, grassName);
+        grassType = EditorGUILayout.ObjectField("grass type", grassType, typeof(GrassType), false) as GrassType;
+
+        if (brushMat && brushMesh && grassType)
+            this.tool = new GrassTool(brushMat, brushMesh, grassType);
     }
     private void DrawPaintPanel()
     {
@@ -140,8 +135,6 @@ public class GrassToolWindow : EditorWindow
     private void DrawData()
     {
         EditorGUILayout.LabelField("");
-        //TO REWORK
-
         if (startPaint)
         {
             EditorGUILayout.LabelField("Objects in viewport count = " + tool.viewportCollider.objectsInView.Count);
@@ -189,6 +182,7 @@ public class GrassToolWindow : EditorWindow
         GUIUtility.hotControl = tempHotControl;
         tool.EndDraw();
         Tools.hidden = false;
+        grassType = null;
     }
 
 }

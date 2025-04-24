@@ -42,12 +42,13 @@ public class GrassObjectData : ScriptableObject
 
         foreach (var item in tempGrassBlades)
         {
+
             Vector3 point = item.Position;
             Vector2 sizeDelta = new Vector2((ObjectBounds.size.x / ChunkSize.x), (ObjectBounds.size.z / ChunkSize.y));
             float distX = point.x - ObjectBounds.min.x;
             float distZ = point.z - ObjectBounds.min.z;
-            int chunkX = Mathf.RoundToInt(distX / ChunkSize.x);
-            int chunkY = Mathf.RoundToInt(distZ / ChunkSize.y);
+            int chunkX = (int)Mathf.Floor(distX / ChunkSize.x);
+            int chunkY = (int)Mathf.Floor(distZ / ChunkSize.y);
 
             Tuple<int, int> chunkXY = new Tuple<int, int>(chunkX, chunkY);
             if (!chunksToGrassblades.ContainsKey(chunkXY))
@@ -55,6 +56,10 @@ public class GrassObjectData : ScriptableObject
                 chunksToGrassblades.Add(chunkXY, new List<GrassObjectChunk.GrassBladeData>());
             }
             chunksToGrassblades[chunkXY].Add(item);
+
+
+
+
         }
 
         List<Tuple<int, int>> keys = chunksToGrassblades.Keys.ToList();
@@ -68,14 +73,15 @@ public class GrassObjectData : ScriptableObject
     public GrassObjectChunk GetChunkByPosition(Vector3 point)
     {
         Vector2 sizeDelta = new Vector2((ObjectBounds.size.x / ChunkSize.x), (ObjectBounds.size.z / ChunkSize.y));
-        float distX = Mathf.Abs(ObjectBounds.min.x) + Mathf.Abs(point.x);
-        float distZ = Mathf.Abs(ObjectBounds.min.z) + Mathf.Abs(point.z);
-        int chunkX = Mathf.RoundToInt(distX / ChunkSize.x);
-        int chunkY = Mathf.RoundToInt(distZ / ChunkSize.y);
+        float distX = point.x - ObjectBounds.min.x;
+        float distZ = point.z - ObjectBounds.min.z;
+        int chunkX = (int)Mathf.Floor(distX / ChunkSize.x);
+        int chunkY = (int)Mathf.Floor(distZ / ChunkSize.y);
         return chunks.Get(chunkX, chunkY);
     }
     public void RemoveGrassBlades(Vector3 point, float distance)
     {
+        //TODO:add More chunks
         GrassObjectChunk selectedChunk = GetChunkByPosition(point);
         List<GrassObjectChunk.GrassBladeData> tempGrassBlades = selectedChunk.GrassBlades.ToList();
         for (int i = 0; i < tempGrassBlades.Count; i++)
