@@ -38,6 +38,7 @@ Shader "Custom/GrassIndirect"
                 float3 position;
                 float light;
                 float4 textureColor;
+                
             };
             StructuredBuffer<shaderParams> _ParamsBuffer;
 
@@ -46,6 +47,7 @@ Shader "Custom/GrassIndirect"
                 float4 vertex : POSITION;
                 uint vertexId : SV_VertexID;
                 float2 uv : TEXCOORD0;
+                UNITY_VERTEX_INPUT_INSTANCE_ID
             };
 
             struct v2f
@@ -55,6 +57,7 @@ Shader "Custom/GrassIndirect"
                 float lightning : TEXCOORD1;
                 float3 worldPos : TEXCOORD2;
                 float4 groundColor : TEXCOORD3;
+                UNITY_VERTEX_OUTPUT_STEREO
             };
 
             sampler2D _MainTex;
@@ -78,9 +81,11 @@ Shader "Custom/GrassIndirect"
                 InitIndirectDrawArgs(0);
                 uint cmdID = GetCommandID(0);
                 uint ID = GetIndirectInstanceID(instance_id);
-
+                
+              
                 v2f o;
-
+                UNITY_SETUP_INSTANCE_ID(v);
+                UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
                 // Pobranie pozycji swiata
                 float3 localPos = v.vertex.xyz;
                 float3 worldPos = _ParamsBuffer[ID].position;

@@ -16,6 +16,7 @@ public class ObjectGrassRenderer
     public bool enabled { private set; get; }
 
     public GrassObjectChunk ChunkData => data;
+    public Bounds bounds;
 
     public ObjectGrassRenderer(GrassObjectChunk data, Material drawMat, Mesh drawMesh)
     {
@@ -27,6 +28,11 @@ public class ObjectGrassRenderer
         this.commandData = new GraphicsBuffer.IndirectDrawIndexedArgs[1];
         instanceParams = new BasicInstancedParams[instances];
         enabled = instances > 0;
+
+        bounds = new Bounds();
+        bounds.center = data.ObjectBounds.center + new Vector3(0, 1, 0);
+        bounds.extents = data.ObjectBounds.extents;
+
         if (instances > 0)
         {
             paramsBuffer = new ComputeBuffer(instances, GetStructSize(typeof(BasicInstancedParams)));
@@ -66,16 +72,28 @@ public class ObjectGrassRenderer
 
     public void Draw()
     {
-        Graphics.RenderMeshIndirect(renderParams, drawMesh, commandBuf, 1);
+        //if (IsVisible())
+        {
+            Graphics.RenderMeshIndirect(renderParams, drawMesh, commandBuf, 1);
+        }
+    }
+
+    private bool IsVisible()
+    {
+        Bounds renderBound = new Bounds();
+        renderBound.center = bounds.center;
+        renderBound.extents = bounds.extents;
+
+        Plane[] planes = GeometryUtility.CalculateFrustumPlanes(Camera.main);
+        bool inBounds = GeometryUtility.TestPlanesAABB(planes, renderBound);
+        return inBounds;
     }
 
     private void InitializeRender()
     {
         renderParams = new RenderParams(drawMat);
-
-        renderParams.worldBounds = data.ObjectBounds;
+        renderParams.worldBounds = bounds;
         renderParams.matProps = new MaterialPropertyBlock();
-        Vector3 center = data.ObjectBounds.center;
         for (int i = 0; i < instances; i++)
         {
             instanceParams[i] = new BasicInstancedParams();
@@ -91,5 +109,16 @@ public class ObjectGrassRenderer
         commandData[0].instanceCount = (uint)instances;
 
         commandBuf.SetData(commandData);
+    }
+
+    internal void DrawGizmo()
+    {
+        Color col = Color.gray;
+        col.a = 0.5f;
+        Gizmos.color = col;
+        if (IsVisible())
+        {
+            Gizmos.DrawCube(bounds.center, bounds.extents * 2);
+        }
     }
 }

@@ -4,9 +4,6 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class GrassRenderer : MonoBehaviour
 {
-    [SerializeField] Material grassMat;
-    [SerializeField] Mesh grassMesh;
-
     public GrassType grassType;
     public GrassObject[] grassObjects;
 
@@ -31,7 +28,7 @@ public class GrassRenderer : MonoBehaviour
         }
 #endif
         renderers = new ObjectGrassRenderer[grassObjects.Length][,];
-        if (grassObjects.Length > 0 && grassMat && grassMesh)
+        if (grassObjects.Length > 0 && grassType.mat && grassType.mesh)
         {
             for (int i = 0; i < renderers.Length; i++)
             {
@@ -41,7 +38,7 @@ public class GrassRenderer : MonoBehaviour
                 {
                     for (int k = 0; k < chunks.Size.y; k++)
                     {
-                        renderers[i][j, k] = new ObjectGrassRenderer(chunks.Get(j, k), grassMat, grassMesh);
+                        renderers[i][j, k] = new ObjectGrassRenderer(chunks.Get(j, k), grassType.mat, grassType.mesh);
                     }
                 }
             }
@@ -94,7 +91,6 @@ public class GrassRenderer : MonoBehaviour
     {
 #if UNITY_EDITOR
         if (!drawGizmos) return;
-#endif
 
         if (renderers == null || renderers.Length < 1)
         {
@@ -121,26 +117,26 @@ public class GrassRenderer : MonoBehaviour
 
                 for (int j = 0; j < yLen; j++)
                 {
-                    DrawGizmo(min, max, item[i, j]);
+                    item[i, j].DrawGizmo();
                 }
             }
         }
-
+#endif
     }
-
+#if UNITY_EDITOR
     private static void DrawGizmo(Vector2 min, Vector2 max, ObjectGrassRenderer render)
     {
-        Vector3 center = render.ChunkData.ObjectBounds.center;
-
+        Vector3 center = render.bounds.center;
+        center += new Vector3(0, 0, 0);
         Color col = Color.black;
         col.a = 0.5f;
-        Vector2 point = render.ChunkData.ObjectBounds.center;
-        point.y = render.ChunkData.ObjectBounds.center.z;
+        Vector2 point = render.bounds.center;
+        point.y = render.bounds.center.z;
         Vector2 normPos = NormalizePosition(min, max, point);
         col.r = normPos.x;
         col.g = normPos.y;
 
-        var bounds = render.ChunkData.ObjectBounds;
+        var bounds = render.bounds;
         Camera cam = SceneView.currentDrawingSceneView.camera;
         UnityEngine.Plane[] planes = GeometryUtility.CalculateFrustumPlanes(Camera.main);
         bool inBounds = GeometryUtility.TestPlanesAABB(planes, bounds);
@@ -148,9 +144,10 @@ public class GrassRenderer : MonoBehaviour
         if (inBounds)
         {
             Gizmos.color = col;
-            Gizmos.DrawCube(center, render.ChunkData.ObjectBounds.size + new Vector3(-0.5f, 1, -0.5f));
+            Gizmos.DrawCube(center, render.bounds.size + new Vector3(-0.5f, 0, -0.5f));
         }
     }
+#endif
     static public Vector2 NormalizePosition(Vector2 min, Vector2 max, Vector2 point)
     {
         Vector2 norm = Vector2.zero;

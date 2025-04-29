@@ -99,7 +99,8 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 0.3}
     - _ColorBottom: {r: 0, g: 0, b: 0, a: 1}
     - _ColorRemap: {r: 0, g: 1, b: 0, a: 1}
-    - _ColorTop: {r: 0.008658171, g: 1, b: 0, a: 1}
+    - _ColorTop: {r: 0.32973143, g: 0.7924528, b: 0.30277678, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _LightmapScaleOffset: {r: 0.02, g: 0.02, b: -0.145, a: -0.145}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1

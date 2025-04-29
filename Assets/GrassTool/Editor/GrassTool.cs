@@ -144,11 +144,14 @@ public class GrassTool
 
         SceneView.RepaintAll();
         Renderer renderer = hit.collider.GetComponent<Renderer>();
-        int lightmapIndex = renderer.lightmapIndex;
-        Color lightmapColor = Color.white;
+        if (renderer)
+        {
+            int lightmapIndex = renderer.lightmapIndex;
+            Color lightmapColor = Color.white;
 
-        lightmapColor.a = 0.3f;
-        brushMat.SetColor("_Color", lightmapColor);
+            lightmapColor.a = 0.3f;
+            brushMat.SetColor("_Color", lightmapColor);
+        }
         brushMat.SetPass(0);
         Graphics.DrawMeshNow(brushMesh, matrix, 0);
 
@@ -228,7 +231,7 @@ public class GrassTool
         int y = Mathf.FloorToInt(uv.y * currentTexture.height);
         if (!currentTexture.isReadable) SetTextureReadable(currentTexture, true);
         Color color = currentTexture.GetPixel(x, y);
-        return color;
+        return color.linear;
     }
 
     private void SetTextureReadable(Texture2D texture, bool v)
