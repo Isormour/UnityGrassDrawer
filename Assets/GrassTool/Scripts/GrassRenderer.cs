@@ -7,7 +7,7 @@ public class GrassRenderer : MonoBehaviour
     public GrassType grassType;
     public GrassObject[] grassObjects;
 
-    public ObjectGrassRenderer[][,] renderers { private set; get; }
+    public ObjectGrassRendererGrid[] objectGrid { private set; get; }
 
 #if UNITY_EDITOR
     public bool drawGizmos = false;
@@ -27,23 +27,22 @@ public class GrassRenderer : MonoBehaviour
                 grassObjects[i].data.OnRefreshRenderer = OnEnable;
         }
 #endif
-        renderers = new ObjectGrassRenderer[grassObjects.Length][,];
+        CreateGridsForObjects();
+    }
+
+    private void CreateGridsForObjects()
+    {
+        objectGrid = new ObjectGrassRendererGrid[grassObjects.Length];
         if (grassObjects.Length > 0 && grassType.mat && grassType.mesh)
         {
-            for (int i = 0; i < renderers.Length; i++)
+            for (int i = 0; i < objectGrid.Length; i++)
             {
                 var chunks = grassObjects[i].data.chunks;
-                renderers[i] = new ObjectGrassRenderer[chunks.Size.x, chunks.Size.y];
-                for (int j = 0; j < chunks.Size.x; j++)
-                {
-                    for (int k = 0; k < chunks.Size.y; k++)
-                    {
-                        renderers[i][j, k] = new ObjectGrassRenderer(chunks.Get(j, k), grassType.mat, grassType.mesh);
-                    }
-                }
+                objectGrid[i] = new ObjectGrassRendererGrid(chunks, grassType.mat, grassType.mesh);
             }
         }
     }
+
     public void AddGrassObject(GrassObject grassObject)
     {
         GrassObject[] old = grassObjects;
@@ -58,72 +57,64 @@ public class GrassRenderer : MonoBehaviour
 
     private void Update()
     {
-        if (renderers == null || renderers.Length < 1)
+        if (objectGrid == null || objectGrid.Length < 1)
             return;
 
-        foreach (var item in renderers)
+        foreach (var item in objectGrid)
         {
             if (item != null)
-                foreach (var chunk in item)
-                {
-                    if (chunk.enabled)
-                        chunk.Update();
-                }
+                item.Update();
         }
 
     }
     private void OnDisable()
     {
-        if (renderers != null && renderers.Length > 0)
+        if (objectGrid != null && objectGrid.Length > 0)
         {
-            foreach (var item in renderers)
+            foreach (var item in objectGrid)
             {
                 if (item != null)
-                    foreach (var chunk in item)
-                    {
-                        chunk?.Deinitialize();
-                    }
+                    item.Deinitialize();
             }
         }
-        renderers = null;
+        objectGrid = null;
     }
+#if UNITY_EDITOR
     public void OnDrawGizmos()
     {
-#if UNITY_EDITOR
+
         if (!drawGizmos) return;
 
-        if (renderers == null || renderers.Length < 1)
+        if (objectGrid == null || objectGrid.Length < 1)
         {
             return;
         }
         Vector2 min = Vector2.zero;
         Vector2 max = Vector2.zero;
 
-        foreach (var item in renderers)
+        foreach (var item in objectGrid)
         {
             if (item == null)
 
                 return;
 
-            int xLen = item.GetLength(0);
-            min = item[0, 0].ChunkData.ObjectBounds.center;
-            min.y = item[0, 0].ChunkData.ObjectBounds.center.z;
+            int xLen = item.objectGrassRenderers.GetLength(0);
+            min = item.objectGrassRenderers[0, 0].ChunkData.ObjectBounds.center;
+            min.y = item.objectGrassRenderers[0, 0].ChunkData.ObjectBounds.center.z;
 
             for (int i = 0; i < xLen; i++)
             {
-                int yLen = item.GetLength(1);
-                max = item[xLen - 1, yLen - 1].ChunkData.ObjectBounds.center;
-                max.y = item[xLen - 1, yLen - 1].ChunkData.ObjectBounds.center.z;
+                int yLen = item.objectGrassRenderers.GetLength(1);
+                max = item.objectGrassRenderers[xLen - 1, yLen - 1].ChunkData.ObjectBounds.center;
+                max.y = item.objectGrassRenderers[xLen - 1, yLen - 1].ChunkData.ObjectBounds.center.z;
 
                 for (int j = 0; j < yLen; j++)
                 {
-                    item[i, j].DrawGizmo();
+                    item.objectGrassRenderers[i, j].DrawGizmo();
                 }
             }
         }
-#endif
     }
-#if UNITY_EDITOR
     private static void DrawGizmo(Vector2 min, Vector2 max, ObjectGrassRenderer render)
     {
         Vector3 center = render.bounds.center;
